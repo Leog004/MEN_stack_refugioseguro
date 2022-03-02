@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Refugio Seguro | Youth Ministry</title>
+<meta name="description" content="Refugio Seguro es un CASA DE RESTAURACIÓN, SANIDAD, Y LIBERACIÓN">
+<meta name="keywords" content="Refugio Seguro, Pharr, Church, Spanish Church ">
+<meta name="news_keywords" content="Church, Pharr, Refugio Seguro" />
+<meta name="author" content="Refugio Seguro">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="UxCFbJOb4uqdq5KQECIFnNsbLv5tNL2oQS6d2eQ1rMw">
+<!-- CSS
+  ================================================== -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/vendor/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="/vendor/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+<link href="/css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
+<!-- Color Style -->
+<link href="/colors/color5.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/png" href="/images/favicon/icon.png" sizes="32x32">    
+        <style type="text/css">
+        
+        .wholePage{
+            height: 60vh;
+        }
+        
+        
+   
+
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+        
+        
+        
+        
+@media only screen and (max-width: 600px) {
+    .wholePage{
+        height: 40vh;
+        }
+    }
+    </style>
+    
+<!-- SCRIPTS
+  ================================================== -->
+<script src="js/modernizr.js"></script><!-- Modernizr -->
+</head>
+<body>
+<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<div class="body"> 
+	<!-- Start Site Header -->
+	<header class="site-header">
+    	<div class="container for-navi">
+        	<div class="site-logo">
+            <h1>
+                <a href="/">
+                    <span class="logo-icon"><img src="/media/Logo2.png"></span>
+                </a>
+            </h1>
+            </div>
+            <!-- Main Navigation -->
+           <% include ../partials/rsheader %>    
+            <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+    	</div>
+	</header>
+	<!-- End Site Header -->
+    <!-- Start Page Header -->
+    <div class="page-header parallax clearfix wholePage">
+      <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<div class="arrow-down"></div>
+  </div>
+    </div>
+    <!-- End Page Header -->
+    <!-- Breadcrumbs -->
+    <div class="lgray-bg breadcrumb-cont">
+    	<div class="container">
+          	<ol class="breadcrumb">
+            	<li><a href="index.html">Home</a></li>
+            	<li class="active">Children Ministry</li>
+          	</ol>
+        </div>
+    </div>
+    <!-- Start Body Content -->
+  	<div class="main" role="main">
+    	<div id="content" class="content full">
+    	  <% ministry.forEach(function(allministry){  %>
+    	  <% for (x in allministry){ %>
+    	  <% if (allministry[x] == "children"){%>
+        	<div class="container">
+        	  <% if(currentUser && currentUser.isAdmin){ %>
+        	    <a href="/ministry/<%=allministry._id%>/edit" class="label label-danger">Edit Children Ministry</a> <%  }  %>
+              <span class="label label-primary">We Love To Praise Him <i class="fas fa-cross" style="margin-left:5px;"></i></span>
+                <div class="row">
+                	<div class="col-md-9">
+                    	<h2><%= allministry.subtitle %></h2>
+                    	<hr class="sm">
+                <div class="row">
+                  	<ul class="sort-destination isotope-grid" data-sort-id="gallery">
+                    	<li class="col-md-4 col-sm-4 grid-item format-image">
+                      		<div class="grid-item-inner"><img src="/images/Children1.jpg" alt=""> </a> </div>
+                    	</li>
+                    	<li class="col-md-4 col-sm-4 grid-item format-image">
+                      		<div class="grid-item-inner"><img src="/images/children2.jpg" alt=""> </a> </div>
+                    	</li>
+                    	<li class="col-md-4 col-sm-4 grid-item format-image">
+                      		<div class="grid-item-inner"><img src="/images/children4.jpg" alt=""> </a> </div>
+                      	</li>
+
+                    	<li class="col-md-4 col-sm-4 grid-item format-image">
+                    		<div class="grid-item-inner"><img src="/images/children3.jpg" alt=""> </a> </div>
+                    	</li>
+                    	<li class="col-md-4 col-sm-4 grid-item format-image">
+                        	<div class="grid-item-inner"><img src="/images/children5.jpg" alt=""> </a> </div>
+                    	</li>
+                    	<li class="col-md-4 col-sm-4 grid-item format-image">
+                        	<div class="grid-item-inner"><img src="/images/children6.jpg" alt=""> </a> </div>
+                    	</li>
+                  	</ul>
+           		</div>
+                   	</div>
+                    <div class="col-md-3">
+                        	<h3>Líderes </h3>
+                            <hr class="sm">
+                        <!-- <div class="grid-item staff-item format-standard">-->
+                        <!--	<div class="grid-item-inner">-->
+                        <!--  		<a href="staff.html" class="media-box">-->
+                        <!--        	 <img src="/images/DSC03655_1.JPG" alt="">-->
+                        <!--       	</a> -->
+                        <!--  		<div class="grid-content">-->
+                        <!--        	<div class="staff-item-name">-->
+                        <!--    			<h5>Hilda Cordova</h5>-->
+                        <!--                <span class="meta-data">Lider De RSKIDZ</span>-->
+                        <!--            </div>-->
+                        <!--    		    <ul class="social-icons-colored">-->
+                        <!--                <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--                <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--            </ul>-->
+                        <!--  		</div>-->
+                        <!--     </div>-->
+                        <!--</div>-->
+                          <div class="grid-item staff-item format-standard">
+                        	<div class="grid-item-inner">
+                          		<a href="staff.html" class="media-box">
+                                	 <img src="/images/Noemi.png" alt="">
+                               	</a> 
+                          		<div class="grid-content">
+                                	<div class="staff-item-name">
+                            			<h5>Noemi Ramirez</h5>
+                                        <span class="meta-data">Líder de RS KIDZ</span>
+                                    </div>
+                            		    <!--<ul class="social-icons-colored">-->
+                                  <!--      <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>-->
+                                  <!--      <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                                  <!--  </ul>                            		-->
+                          		</div>
+                             </div>
+                        </div>
+                 </div>
+                        
+               	</div>
+                <div class="row">
+                	<div class="col-md-6 col-sm-6">
+                    	<h3><%=allministry.Secondtitle%></h3>
+               			<p><%= allministry.paragraphSecond%></p>
+               			<h3><%=allministry.Secondsubtitle%></h3>
+               			<p><%=allministry.Secondparagraph%></p>
+               			</div>
+                	<div class="col-md-6 col-sm-6">
+                        <h3>Common Questions</h3>
+                        <!-- Start Accordion -->
+                        <div class="accordion" id="accordionArea">
+                          	<div class="accordion-group panel">
+                            	<div class="accordion-heading accordionize"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#oneArea"> Mi hijo tiene 5 años, ¿puede ir a clase?<i class="fa fa-angle-down"></i> </a> </div>
+                            	<div id="oneArea" class="accordion-body collapse">
+                              		<div class="accordion-inner"> Sí, tenemos clases para todos los niños de edad de 5 a 11 años</div>
+                          		</div>
+                           	</div>
+                          	<div class="accordion-group panel">
+                            	<div class="accordion-heading accordionize"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#twoArea">¿A qué hora comienzan las clases? <i class="fa fa-angle-down"></i> </a> </div>
+                            	<div id="twoArea" class="accordion-body collapse">
+                              		<div class="accordion-inner"> Los jueves las comienzan a las 6:30pm, y los domingos las clases comienzan a la 1:45pm</div>
+                          		</div>
+                           	</div>
+                          	<div class="accordion-group panel">
+                            	<div class="accordion-heading accordionize"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#threeArea"> ¿Tengo que dejar a mi hijo allí? <i class="fa fa-angle-down"></i> </a> </div>
+                            	<div id="threeArea" class="accordion-body collapse">
+                              		<div class="accordion-inner"> </div>
+                          		</div>
+                           	</div>
+                        </div>
+                        <!-- End Accordion -->
+                   	</div>
+                    <div class="col-md-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.2563835253386!2d-98.02940308497026!3d26.18833688344497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86657618d9368541%3A0x9fff3d9137f063d0!2s3211%20N%20Victoria%20Rd%2C%20Donna%2C%20TX%2078537!5e0!3m2!1sen!2sus!4v1577480095999!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+              	</div>
+            </div>
+            
+            <% } } });   %>
+        </div>
+   	</div>
+    <!-- End Body Content -->
+    
+    <style type="text/css">
+           .arrow-down{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  bottom: 100px;
+}
+
+.arrow-down::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin:auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  transform:rotate(45deg);
+  animation: 3s arrow infinite ease;
+}
+
+
+@keyframes arrow{
+  0%, 100%{
+    top:50px;
+  }
+  50%{
+    top:80px;
+  }
+}
+
+
+.slideshow { 
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  
+}
+
+.slideshow li{ 
+ 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+
+.slideshow li:nth-child(1) { 
+  background-image: linear-gradient(to bottom, rgba(29, 67, 80, 0.9) 0, rgba(29, 67, 80, .4)  100%),url("/images/childrenheader1.jpg") 
+}
+.slideshow li:nth-child(2) { 
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3) 0, rgba(68, 205, 0, .2) 100%),url("/images/childrenheader2.jpg");
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(240, 95, 64, .8) 100%),url("/images/childrenheader3.jpg");
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0, rgba(78, 122, 157, 1) 100%),url("/images/childrenheader4.jpg");
+  animation-delay: 30s; 
+}
+
+.slideshow li:nth-child(5) { 
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0, rgba(78, 122, 157, 1) 100%),url("/images/childrenheader1.jpg");
+  animation-delay: 40s; 
+}
+
+    </style>
+    
+    
+    
+    <!-- Start site footer -->
+  <% include ../partials/rsfooter %>
+    <!-- End site footer -->
+  	<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>  
+</div>
+<script src="/js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
+<script src="/vendor/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
+<script src="/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="/js/bootstrap.js"></script> <!-- UI -->
+<script src="/js/init.js"></script> <!-- All Scripts -->
+<script src="/vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+<script src="/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+<script src="/vendor/mediaelement/mediaelement-and-player.min.js"></script> <!-- MediaElements --> 
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</body>
+</html>

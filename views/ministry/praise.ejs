@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Refugio Seguro | Praise Ministry</title>
+<meta name="description" content="Refugio Seguro es un CASA DE RESTAURACIÓN, SANIDAD, Y LIBERACIÓN">
+<meta name="keywords" content="Refugio Seguro, Pharr, Church, Spanish Church ">
+<meta name="news_keywords" content="Church, Pharr, Refugio Seguro" />
+<meta name="author" content="Refugio Seguro">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="UxCFbJOb4uqdq5KQECIFnNsbLv5tNL2oQS6d2eQ1rMw">
+<!-- CSS
+  ================================================== -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/vendor/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="/vendor/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+<link href="/css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="/images/favicon/icon.png" sizes="32x32">
+
+<!-- Color Style -->
+<link href="/colors/color5.css" rel="stylesheet" type="text/css">
+    
+    <style type="text/css">
+        
+        .wholePage{
+            height: 55vh;
+        }
+@media only screen and (max-width: 600px) {
+    .wholePage{
+        height: 40vh;
+        }
+    }
+    </style>
+<!-- SCRIPTS
+  ================================================== -->
+<script src="js/modernizr.js"></script><!-- Modernizr -->
+</head>
+<body>
+<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<div class="body"> 
+	<!-- Start Site Header -->
+	<header class="site-header">
+    	<div class="container for-navi">
+        	<div class="site-logo">
+            <h1>
+                <a href="/">
+                    <span class="logo-icon"><img src="/media/Logo2.png"></span>
+                </a>
+            </h1>
+            </div>
+            <!-- Main Navigation -->
+          <% include ../partials/rsheader %>
+            <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+    	</div>
+	</header>
+	<!-- End Site Header -->
+    <!-- Start Page Header -->
+    <div class="page-header parallax clearfix" style="background-image:linear-gradient(0deg, rgba(58,96,115,1) 0%, rgba(22,34,42,.4) 100%),url(https://images.unsplash.com/photo-1533582623499-fbf239041503?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80); ">
+    </div>
+    <!-- End Page Header -->
+    <!-- Breadcrumbs -->
+    <div class="lgray-bg breadcrumb-cont">
+    	<div class="container">
+          	<ol class="breadcrumb">
+            	<li><a href="index1.html">Home</a></li>
+            	<li class="active">Praise Ministry</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Start Body Content -->
+  	<div class="main" role="main">
+    	<div id="content" class="content full">
+        	<div class="container">
+                <div class="row">
+                            	   <% ministry.forEach(function(allministry){ %>
+        	   <% for(y in allministry){ %>
+        	   <% if (allministry[y] == "praise"){ %>
+                	<div class="col-md-9 col-sm-9">
+                <% if(currentUser && currentUser.isAdmin){ %>
+        	   <a href="/ministry/<%=allministry._id%>/edit" class="label label-danger">Edit Praise Ministry</a> <%  }  %>
+        	   <span class="label label-primary">We Love To Praise Him <i class="fas fa-cross" style="margin-left:5px;"></i></span>
+
+                        <div class="sermon-series-description">
+                    		<h2 style="text-transform:uppercase;"><%=allministry.subtitle%></h2>
+                        	<p><%= allministry.paragraph %></p></div>
+                        <ul class="sermons-list">
+                        	<li class="sermon-item format-standard">
+                            	<div class="row">
+                                	<div class="col-md-12">
+                                	<div class="grid-item staff-item format-standard">
+                        	            <div class="grid-item-inner">
+                                    	<img src="/images/DSC03665.jpg" alt="" width="100%">
+                                    <div class="grid-content">
+                                	<div class="">
+                                        <span class="meta-data">Grupo de Alabanza</span>
+                                    </div>
+                          		</div>
+                                    	</div>
+                                    	</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="spacer-40"></div>
+                        	<h3>Director</h3>
+                            <hr class="sm">
+                        <div class="grid-item staff-item format-standard">
+                        	<div class="grid-item-inner">
+                          		<a href="staff.html" class="media-box">
+                                	 <img src="/images/AYARSDIRECTOR2.jpg" alt="">
+                               	</a> 
+                          		<div class="grid-content">
+                                	<div class="staff-item-name">
+                            			<h5>Carlos Salazar</h5>
+                                        <span class="meta-data">Director de Alabanza </span>
+                                    </div>
+                            		<p>RS Family Ministry.</p>
+                          		</div>
+                             </div>
+                        </div>
+                        
+                        	<form action="/ministry/praise" method="POST">
+                        	<div class="row">
+                        	    <div class="spacer-50"></div>
+                        	    <div class="col-md-12 text-center">
+                        	        <h4>TE GUSTARIA SERVIR? </h4>
+                        	        <hr>
+                        	    </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" id="Name" name="Name"  class="form-control input-lg" placeholder="Nombre ">
+                                    </div>
+                                </div>
+                           	</div>
+                        	<div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email"  class="form-control input-lg" placeholder="Correo electrónico ">
+                                    </div>
+                                </div>
+                          	</div>
+                        	<div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea cols="3" rows="3" id="comments" name="comments" class="form-control input-lg" placeholder="Mensaje "></textarea>
+                                    </div>
+                                </div>
+                          	</div>
+                        	<div class="row">
+                                <div class="col-md-12">
+                                    <input type="submit" name="donate" class="btn btn-primary btn-lg btn-block" value="Enviar !">
+                                </div>
+                          	</div>
+                		</form>
+                        
+                    </div>
+                    
+                    
+                    
+                    <!--<div class="col-xs-12">-->
+                    <!--    <ul class="sermons-list">-->
+                    <!--    	<li class="sermon-item format-standard">-->
+                    <!--        	<div class="row">-->
+                    <!--            	<div class="col-md-5">-->
+                    <!--                	<a href="single-sermon.html" class="media-box"><img src="/images/Image1.PNG" alt=""></a>-->
+                    <!--                    <a href="single-sermon.html" class="basic-link">Watch Sermon</a>-->
+                    <!--                </div>-->
+                    <!--                <div class="col-md-7">-->
+                    <!--                	<h3><a href="single-sermon.html">It’s Time for a Comeback</a></h3>-->
+                    <!--                    <span class="meta-data"><i class="fa fa-calendar"></i> July 20th, 2014</span>-->
+                    <!--                    <p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo...</p>-->
+                    <!--                </div>-->
+                    <!--            </div>-->
+                    <!--        </li>-->
+                    <!--    </ul>-->
+                    <!--</div>-->
+                    
+                    
+                    
+                </div>
+                <%  } }  });  %>
+         	</div>
+        </div>
+   	</div>
+    <!-- End Body Content -->
+    
+    
+     <div class="gallery-updates cols5 clearfix">
+    	<ul>
+        	<li class="format-image"><a href="/media/praise1.jpg" data-rel="prettyPhoto" class="media-box"><img src="/media/praise1.jpg" alt=""></a></li>
+        	<li class="format-image"><a href="/media/praise2.jpg" data-rel="prettyPhoto" class="media-box"><img src="/media/praise2.jpg" alt=""></a></li>
+        	<li class="format-image"><a href="/media/praise3.png" data-rel="prettyPhoto" class="media-box"><img src="/media/praise3.png" alt=""></a></li>
+        	<li class="format-image"><a href="/media/praise1.jpg" data-rel="prettyPhoto" class="media-box"><img src="/media/praise1.jpg" alt=""></a></li>
+         	<li class="format-image"><a href="/media/praise2.jpg" data-rel="prettyPhoto" class="media-box"><img src="/media/praise2.jpg" alt=""></a></li>
+      	</ul>
+        <div class="gallery-updates-overlay">
+        	<div class="container">
+            	<i class="icon-multiple-image"></i>
+                <h2>Updates from our gallery</h2>
+            </div>
+        </div>
+    </div>
+    <div class="spacer-50"></div>
+    <div class="container">
+        <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="tabs">
+                      <ul class="nav nav-tabs">
+                        <li class="active"> <a data-toggle="tab" href="#sampletab1"> Map </a> </li>
+                        <li class=""> <a data-toggle="tab" href="#sampletab2"> Time Of Practice </a> </li>
+                      </ul>
+                      <div class="tab-content">
+                        <div id="sampletab1" class="tab-pane active">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.2563835253386!2d-98.02940308497026!3d26.18833688344497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86657618d9368541%3A0x9fff3d9137f063d0!2s3211%20N%20Victoria%20Rd%2C%20Donna%2C%20TX%2078537!5e0!3m2!1sen!2sus!4v1577480095999!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div id="sampletab2" class="tab-pane">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit tortor, dictum in gravida nec, aliquet non lorem. Donec vestibulum justo a diam ultricies pellentesque.</p>
+                        </div>
+                      </div>
+                    </div>
+        </div>
+    </div>
+</div>
+    <div class="spacer-50"></div>
+
+    <!-- Start site footer -->
+    
+    <% include ../partials/rsfooter %>
+    
+    <!-- End site footer -->
+  	<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>  
+</div>
+<script src="/js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
+<script src="/vendor/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
+<script src="/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="/js/bootstrap.js"></script> <!-- UI -->
+<script src="/js/init.js"></script> <!-- All Scripts -->
+<script src="/vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+<script src="/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+<script src="/vendor/mediaelement/mediaelement-and-player.min.js"></script> <!-- MediaElements --> 
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Refugio Seguro | Youth Ministry</title>
+<meta name="description" content="Refugio Seguro es un CASA DE RESTAURACIÓN, SANIDAD, Y LIBERACIÓN">
+<meta name="keywords" content="Refugio Seguro, Pharr, Church, Spanish Church, Youth ">
+<meta name="news_keywords" content="Church, Pharr, Refugio Seguro, Youth" />
+<meta name="author" content="Refugio Seguro">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="UxCFbJOb4uqdq5KQECIFnNsbLv5tNL2oQS6d2eQ1rMw">
+<!-- CSS
+  ================================================== -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/vendor/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="/vendor/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+<link href="/css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
+<link rel="icon" type="image/png" href="/images/favicon/icon.png" sizes="32x32">
+<!-- Color Style -->
+<link href="/colors/color5.css" rel="stylesheet" type="text/css">
+    
+        <style type="text/css">
+        
+        .wholePage{
+            height: 70vh;
+        }
+@media only screen and (max-width: 600px) {
+    .wholePage{
+        height: 40vh;
+        }
+    }
+    </style>
+    
+<!-- SCRIPTS
+  ================================================== -->
+<script src="js/modernizr.js"></script><!-- Modernizr -->
+</head>
+<body>
+<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<div class="body"> 
+	<!-- Start Site Header -->
+	<header class="site-header">
+    	<div class="container for-navi">
+        	<div class="site-logo">
+            <h1>
+                <a href="/">
+                    <span class="logo-icon"><img src="/media/Logo2.png"></span>
+                </a>
+            </h1>
+            </div>  
+            <!-- Main Navigation -->
+           <%  include ../partials/rsheader  %>    
+            <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+    	</div>
+	</header>
+	<!-- End Site Header -->
+    <!-- Start Page Header -->
+    <div class="page-header parallax clearfix wholePage" style="background-image:url(https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+        <div class="title-subtitle-holder">
+        	<div class="title-subtitle-holder-inner">
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+    <!-- Breadcrumbs -->
+    <div class="lgray-bg breadcrumb-cont">
+    	<div class="container">
+          	<ol class="breadcrumb">
+            	<li><a href="index.html">Home</a></li>
+            	<li class="active">Youth Ministry</li>
+          	</ol>
+        </div>
+    </div>
+    <!-- Start Body Content -->
+  	<div class="main" role="main">
+    	<div id="content" class="content full">
+    	   <% ministry.forEach(function(allministry){ %>
+        	   <% for(y in allministry){ %>
+        	   <% if (allministry[y] == "youth"){ %>
+        	<div class="container">
+        	            	    <% if(currentUser && currentUser.isAdmin){ %>
+        	   <a href="/ministry/<%=allministry._id%>/edit" class="label label-danger">Edit Praise Ministry</a> <%  }  %>
+        	   <span class="label label-primary">We Love To Praise Him <i class="fas fa-cross" style="margin-left:5px;"></i></span>
+                <h2 style="text-align: center;"><%= allministry.subtitle %></h2>
+                <br>
+                <div class="row">
+                	<div class="col-md-6 col-sm-6">
+                    	<h3><%= allministry.Secondtitle %></h3>
+               			<p> <%= allministry.paragraphSecond %> </p>
+               			<h3><%=allministry.Secondsubtitle%></h3>
+                        <p><%= allministry.Secondparagraph%></p>
+                        </div>
+                	<div class="col-md-6 col-sm-6">
+                        <h3>Common Questions</h3>
+                        <!-- Start Accordion -->
+                        <div class="accordion" id="accordionArea">
+                          	<div class="accordion-group panel">
+                            	<div class="accordion-heading accordionize"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#oneArea"> At what age can I join ReStart Youth?<i class="fa fa-angle-down"></i> </a> </div>
+                            	<div id="oneArea" class="accordion-body collapse">
+                              		<div class="accordion-inner"> ReStart Youth is available for young people ages 13-18.</div>
+                          		</div>
+                           	</div>
+                          	<div class="accordion-group panel">
+                            	<div class="accordion-heading accordionize"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#twoArea"> Can I invite my friends to come along with me? <i class="fa fa-angle-down"></i> </a> </div>
+                            	<div id="twoArea" class="accordion-body collapse">
+                              		<div class="accordion-inner">Yes, we welcome everyone form ages 13-18.</div>
+                          		</div>
+                           	</div>
+                          	<div class="accordion-group panel">
+                            	<div class="accordion-heading accordionize"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#threeArea"> Is there a gathering every Thursday? <i class="fa fa-angle-down"></i> </a> </div>
+                            	<div id="threeArea" class="accordion-body collapse">
+                              		<div class="accordion-inner">Yes, ReStart Youth group gathers every Thursday evening at 7pm.</div>
+                          		</div>
+                           	</div>
+                        </div>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.2563835253386!2d-98.02940308497026!3d26.18833688344497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86657618d9368541%3A0x9fff3d9137f063d0!2s3211%20N%20Victoria%20Rd%2C%20Donna%2C%20TX%2078537!5e0!3m2!1sen!2sus!4v1577480095999!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+                   	</div>
+              	                    	<div class="spacer-50"></div>
+
+                    <div class="col-md-8">                    	
+                    	<hr class="sm">
+                    	<h4>About our youth Pastor</h4>
+                    	<p>My name is Javier Martinez I am Pastor of the youth, RESTART along with my wife Elsa Martinez. I gave my life to the Lord July 22nd, 2009 at 8:30pm. I am currently attending school for my Doctor of Ministry. I started ministry school in 2012 at Texas Bible Institute and completed my course in 2013. Shortly after I started working on my bachelors in theology and currently hold my Masters degree in ministry. My professional studies include Medical Assistant and GED (come on somebody).</p>         <p>I'm currently working for the valleys biggest hospital group MD Hospitalists where my current title is office manager/Community Liaison. My heart is not only to serve God, but serve people as well. My Vision is to see a young generation changed and transformed by the very hand of God. My favorite scripture is Galatians 2:20 "For I am Crucified with Christ never the less I live but Christ in me!" My greatest dream is to make Jesus famous.</p>
+                   	</div>
+                    <div class="col-md-4">
+                        <div class="spacer-20"></div>
+                        <div class="grid-item staff-item format-standard">
+                        	<div class="grid-item-inner">
+                          		<a href="staff.html" class="media-box">
+                                	 <img src="/images/DSC036321.JPG" alt="">
+                               	</a> 
+                          		<div class="grid-content">
+                                	<div class="staff-item-name">
+                            			<h5>Javier &amp; Elsa Martinez</h5>
+                                        <span class="meta-data">Pastores de Jóvenes</span>
+                                    </div>
+                                    <ul class="social-icons-colored">
+                                        <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="vimeo"><a href="https://www.vimeo.com/"><i class="fa fa-vimeo-square"></i></a></li>
+                                        <li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                          		</div>
+                             </div>
+                        </div>
+                    </div>
+               	</div>
+            </div>
+            <% } } });    %>
+        </div>
+   	</div>
+    <!-- End Body Content -->
+    
+    <!-- Start site footer -->
+   <%  include ../partials/rsfooter    %>
+    <!-- End site footer -->
+  	<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>  
+</div>
+<script src="/js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
+<script src="/vendor/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
+<script src="/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="/js/bootstrap.js"></script> <!-- UI -->
+<script src="/js/init.js"></script> <!-- All Scripts -->
+<script src="/vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+<script src="/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+<script src="/vendor/mediaelement/mediaelement-and-player.min.js"></script> <!-- MediaElements --> 
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</body>
+</html>

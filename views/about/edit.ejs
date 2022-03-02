@@ -1,0 +1,59 @@
+
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+           <h1 style="text-align:center;">Edit About US</h1>
+           <div style="width:80%; margin: 20px auto;">
+                <form action="/about/<%=home._id%>?_method=PUT" method="POST">
+                    <div class="form-group col-xs-6">
+                        <label>Title: </label>
+                        <input class="form-control" type ="text" value="<%=home.title%>" name="home[title]">
+                    </div>
+                     <div class="form-group col-xs-6">
+                        <label>Sub-Title: </label>
+                        <input class="form-control" type ="text" value="<%=home.subTitle%>" name="home[subTitle]">
+                    </div>
+                    <div class="form-group">
+                        <label>Paragraph: </label>
+                        <textarea class="form-control" rows="8"  name="home[paragraph]"><%=home.paragraph%></textarea>
+                    </div>
+                    
+                    <div class="form-group col-xs-6">
+                                                <label>Second Title: </label>
+
+                        <input class="form-control" type ="text" placeholder="Title" value="<%=home.Secondtitle%>" name="home[Secondtitle]">
+                    </div> 
+                    <div class="form-group col-xs-6">
+                                                <label>Second Sub-title: </label>
+
+                        <input class="form-control" type ="text" placeholder="subTitle" value="<%=home.Secondsubtitle%>"  name="home[Secondsubtitle]">
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label>Paragraph 2: </label>
+                        <textarea class="form-control" rows="8"  name="home[paragraphSecond]"><%=home.paragraphSecond%></textarea>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label>Sub-Paragraph: </label>
+                        <textarea class="form-control" rows="8"  name="home[Secondparagraph]"><%=home.Secondparagraph%></textarea>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    </div>
+                    
+
+
+                </form>
+                                    <a href="/">Back</a> 
+           </div>
+           
+    </div>
+</div>
+
+<% include ../partials/footer %>

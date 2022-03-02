@@ -1,0 +1,736 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Refugio Seguro</title>
+<meta name="description" content="Refugio Seguro es un CASA DE RESTAURACIÓN, SANIDAD, Y LIBERACIÓN">
+<meta name="keywords" content="Refugio Seguro, Pharr, Church, Spanish Church ">
+<meta name="news_keywords" content="Church, Pharr, Refugio Seguro" />
+<meta name="author" content="Refugio Seguro">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="UxCFbJOb4uqdq5KQECIFnNsbLv5tNL2oQS6d2eQ1rMw">
+<!-- CSS
+  ================================================== -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="vendor/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="vendor/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+<link href="css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
+<link href="http://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/png" href="images/favicon/icon.png" sizes="32x32">
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+
+
+<!-- Color Style -->
+<link href="colors/color5.css" rel="stylesheet" type="text/css">
+    
+    
+       <%   if(currentUser && currentUser.isAdmin){ %>
+
+     <script>
+Swal({
+  position: 'top-end',
+  type: 'success',
+  title: 'Welcome, Your an admin!',
+  padding: '1em',
+  showConfirmButton: false,
+  timer: 1500
+})
+ </script>  
+   
+   <style>
+     
+     .btn-danger{
+      display:block; 
+     }
+     
+          .label-danger{
+     
+       display:block;
+     }
+     
+
+   </style>
+   
+   <% } %>
+
+
+   <style>
+        @media only screen and (max-width: 992px){
+            .upcoming-event-bar .action-buttons {
+                display: inline-block;
+                margin-top: 10px;
+                margin-left: 20px;
+        }
+     }
+
+
+     @media only screen and (max-width: 500px){
+        .events-listing .event-list-item:last-child {
+            margin: 15px 0px 40px 0px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+     }
+   </style>
+    
+    
+<!-- SCRIPTS
+  ================================================== -->
+<script src="js/modernizr.js"></script><!-- Modernizr -->
+</head>
+<body class="home home-style2">
+<div class="body"> 
+	<!-- Start Site Header -->
+	<header class="site-header">
+    	<div class="container for-navi">
+        	<div class="site-logo">
+            <h1>
+                <a href="/">
+                    <span class="logo-icon"><img src="media/Logo2.png"></span>
+                </a>
+            </h1>
+            </div>
+            <!-- Main Navigation -->
+            <nav class="main-navigation" role="navigation">
+                <ul class="sf-menu">
+                    <li><a href="/about">Conócenos</a>
+                    </li>
+                    <li><a href="javascript:void(0)">Ministerios</a>
+                    	<ul class="dropdown">
+                               <li><a href="/ministry/woman">Mujeres Con Visión</a></li>
+                                    <li><a href="/ministry/praise">Alabanza y Adoración</a></li>
+                                    <li><a href="/ministry/youth">ReStart Youth</a></li>
+                                    <li><a href="/ministry/children">RSkidz</a></li>
+                       	</ul>
+                   	</li>
+                    <li><a href="/events">EVENTOS</a>
+                    </li>
+                    <li><a href="/blogs">Blog</a>
+                    </li>
+                	<li><a href="/contact">CONTACTANOS</a></li>
+                 	  <!-- <li title="Offering"><a href="#" data-toggle="modal" data-target="#EOffering" class="event-contact-link"></i>Donaciones</a></li> -->
+                    <li><a href="/donate">Donaciones</a></li>
+
+                  
+                       <%   if(currentUser){ %>
+                	
+                	<li><a href="/logout"><span style="color:#fff; font-weight:700; background:red; padding:8px; border-radius:12px;">logout</span></a></li>
+                	
+                	<% }else{ %>
+                	
+                	                	<a class="btn btn-sm btn-warning" href="/login">Login</a>
+
+                	<% }   %>             	
+                	
+              </ul>
+            </nav>
+            <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+    	</div>
+	</header>
+	<!-- End Site Header -->
+    <!-- Start Hero Slider -->
+    
+    
+    
+
+    
+<section id="home">
+    <div class="showme-video">
+<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="home-bg-video">
+    <source id="video-play" src="media/RSChurchPromoV2.mp4">
+</video>
+</div>
+<div class="showme-image">
+    <img src="media/refugioseguro.gif" id="home-bg-video">
+    </div>
+    <div id="home-overlay">
+        <div class="container">
+            <div id="home-content">
+                <div id="home-content-inner" class="text-left">
+                    <div id="home-heading">
+                    <h1 id="home-heading-1">Refugio Seguro</h1>
+                    <h1 id="home-heading-2"><span>Iglesia Familiar</span></h1>
+                    </div>
+                
+                <div id="home-text">
+                    <p style="font-size:20px;">Domingo 2:00 PM || Miércoles 7:00 PM </p>
+                    <p style="font-size:20px; margin-top:-15px;"><span style="font-weight:700;">English Service</span>: 11:00 AM</p>
+                </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    
+</section>   
+    <div class="arrow-down"></div>
+
+    <!-- End Hero Slider -->
+    <div class="upcoming-event-bar event-dynamic">
+        <div class="container">
+            <div class="row">
+            	<div class="col-md-5 col-sm-5">
+                	<% var i=0; var currentTime = new Date(); currentTime.setHours(0,0,0,0); %>
+                	<% event.forEach(function(allevents){ %>
+                	<% var timestring = allevents.time.charAt(0); %>
+                	<%if (i < 1 && allevents.dateOfEvent.setHours(parseInt(timestring)) >= currentTime){ %>
+                	<span class="label label-primary">Upcoming Event</span> <a href="/events/<%=allevents._id%>/edit" class="label label-danger">Edit Event</a>
+                	<h3><a data-html="true" href="http://www.refugioseguro.com/events/<%=allevents._id%>" class="event-title"><%=allevents.title%></a></h3>
+                   	<span class="meta-data">On <span class="event-date"><%=allevents.month%> <%=allevents.monthDay%>, 2021</span> at <span class="event-time"><%=allevents.time%></span> at</span><span class="meta-data event-location"> <span class="event-location-address"><%=allevents.address%></span></span>
+                </div>
+                <div class="col-md-5 col-sm-7">
+                    <div id="counter" class="counter clearfix" data-date="<%=allevents.month%> <%=allevents.monthDay%>, 2021 <%=allevents.time%>">
+                        <div class="timer-col"> <span id="days"></span> <span class="timer-type">Days</span> </div>
+                        <div class="timer-col"> <span id="hours"></span> <span class="timer-type">Hours</span> </div>
+                        <div class="timer-col"> <span id="minutes"></span> <span class="timer-type">Minutes</span> </div>
+                        <div class="timer-col"> <span id="seconds"></span> <span class="timer-type">Seconds</span> </div>
+                    </div>
+                </div>
+                <div class="col-md-2 text-align-right">
+                    <ul class="action-buttons">
+                        <li title="Share event"><a href="#" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>
+                        <li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>
+                        <li title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>
+                    </ul>
+                    <a href="/events/<%=allevents._id%>" class="btn btn-primary btn-sm ">View Event</a>
+                </div>
+                                <% i++  } %>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    <!-- Lead Content -->
+    <div class="lead-content clearfix">
+    	<div class="lead-content-wrapper">
+    		<div class="container">
+                <div class="row">
+                    <div class="spacer-50"></div>
+                    
+    <% var index = 0;  %>    
+    <% home.forEach(function(allhome){  %>
+   <%  if(index == 0){ %>
+                	<div class="col-md-7">
+                	    <small class="text-muted uppercase t300 ls4 mb-1 d-block">Sobre Nosotros</small>
+                    	<h2 style="font-family: poppins,sans-serif !important; font-size: 3.2rem;line-height: 1.2;letter-spacing: -4px;font-weight: 700; color: #343a40!important;"><%=allhome.title%></h2>
+                    	<hr class="sm"  style="background:#4a89dc;">
+                    	<h4><%=allhome.subTitle%></h4>
+                    	<h5 style="letter-spacing: 1px!important;font-family:poppins,sans-serif !important;font-weight: 300!important;font-size: 16px;opacity: .7; margin-bottom:30px;"><%=allhome.paragraph%></h5>
+                        <a href="/about" class="btn btn-primary">Ver Mas Sobre Nuestro Ministerio</a> <a href="/about/<%=allhome._id%>/edit" class="btn btn-danger">Edit About Refugio Seguro</a>
+                        <hr>
+                 </div>
+                    <div class="col-md-5">
+                    	<div class="fw-video">
+                    		<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FRefugioSeguroIglesia%2Fvideos%2F368869227024981%2F&show_text=0&width=500&mute=0" width="500" height="281" style="border: 2px solid grey; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true" class="iframemovie"></iframe>
+                        </div>
+                    </div>
+                
+    <% } index++; }); %>
+               	</div>
+<div style="background: linear-gradient(45deg, rgba(58,96,115,.01) 0%, rgba(226,115,115,.08) 100%);padding: 20px; border-radius: 10px;" class="smallMe"><p style="font-weight: 600">Verse of the day</p>
+                        <div id="ourmanna-verse">Loading...</div>
+<script src="https://www.ourmanna.com/verses/api/js/" type="text/javascript"></script>
+                   	</div>
+                <div class="spacer-50"></div>
+            	<div class="row" style="background-color: #fff; border-radius: 10px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; padding: 45px 10px;" >
+            	    <div class="col-xs-12 lead-test">
+                        <small class="text-muted uppercase t300 ls4 mb-1 d-block text-left">Ministerio</small>
+                    	<h2 class="text-left" style="font-family: poppins,sans-serif !important; font-size: 1.5rem;line-height: 1.2;letter-spacing: 1px;font-weight: 700; color: #343a40!important;">Conectate con nuestro ministerio</h2>
+                    	<hr class="sm"  style="background:#4a89dc; margin-bottom:35px;"></div>
+<% var index = 0;  %>    
+<% ministry.forEach(function(allministry){  %>
+   <%  %>
+   
+                       <div class="col-md-3 col-sm-3 featured-block">
+                        <h3 style="font-family: poppins,sans-serif !important; font-size: 1.2rem;line-height: 1.8;letter-spacing: 1px;font-weight: 500; color: #343a40!important;"><%=allministry.title%></h3>
+                        <figure>
+                        
+                        	       <%  if(index == 0){ %>
+                        	    	<a href="/ministry/woman"><img src="images/homeministry/Woman.jpg" alt="Our Woman Ministry"></a>
+                    	</figure>
+                   		<p><%=allministry.description.substring(0,60)%>..</p>
+                        <a href="/ministry/woman" class="btn btn-primary">Ver Mas</a><a href="/ministry/<%=allministry._id%>/edit" class="btn btn-danger">Edit Ministry</a>                        	    
+                        	    
+                        	    <% } if(index == 1){ %>
+                 	<a href="/ministry/praise"><img src="images/homeministry/Image5.png" alt="Our Praise Ministry"></a>
+                    	</figure>
+                   		<p><%=allministry.description.substring(0,60)%>..</p>
+                        <a href="/ministry/praise" class="btn btn-primary">Ver Mas</a><a href="/ministry/<%=allministry._id%>/edit" class="btn btn-danger">Edit Ministry</a>                 	
+                 	
+                        	    <% } if(index == 2){ %>
+                         	<a href="/ministry/youth"><img src="images/homeministry/youth.jpg" alt="Our Youth Ministry"></a>
+                         	
+                    	</figure>
+                   		<p><%=allministry.description.substring(0,60)%>..</p>
+                        <a href="/ministry/youth" class="btn btn-primary">Ver Mas</a><a href="/ministry/<%=allministry._id%>/edit" class="btn btn-danger">Edit Ministry</a>                         	
+                       	    
+                        	    <% } if(index == 3){ %>
+                         	<a href="/ministry/children"><img src="images/homeministry/Image3.png" alt="Our Children Ministry"></a>
+                         	
+                    	</figure>
+                   		<p><%=allministry.description.substring(0,60)%>..</p>
+                        <a href="/ministry/children" class="btn btn-primary">Ver Mas</a><a href="/ministry/<%=allministry._id%>/edit" class="btn btn-danger">Edit Ministry</a>                         	
+                     
+                        	    <% } %>
+                        	    
+
+                    </div>
+   
+   
+   <%  index++ }); %>
+                   
+                </div>
+        	</div>
+        </div>
+    </div>
+
+    <!-- Start Body Content -->
+  	<div class="main" role="main" style="border-top: none;">
+    	<div id="content" class="content full">
+        	<div class="container">
+            	<div class="row">
+            	    <div class="col-xs-12">
+                        <small class="text-muted uppercase t300 ls4 mb-1 d-block text-left">Eventos</small>
+                    	<h2 class="text-left" style="font-family: poppins,sans-serif !important; font-size: 1.5rem;line-height: 1.2;letter-spacing: 1px;font-weight: 700; color: #343a40!important;">No te pierdas de nuestros eventos !</h2>
+                    	<hr class="sm"  style="background:#4a89dc; margin-bottom:65px!important;"></div>
+                    <div class="col-md-4 col-sm-4 content-test-right">
+                        <div class="widget latest_sermons_widget content-test-left">
+                            <% sermon.forEach(function(allsermon){ %>
+                            <ul>
+                                <li class="most-recent-sermon clearfix">
+                                    <h3>Servicio Previo</h3>
+                                    <hr class="sm">
+                                    <div class="latest-sermon-video fw-video">
+                                    <iframe src="<%=allsermon.Videourl%>" width="100%" height="225" class="iframemovie" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                                    </div>
+                                    <div class="latest-sermon-content">
+                                        <h4><a href="#"><%= allsermon.title %></a></h4>
+                                        <div class="meta-data">Preaching: <a href="#">Ramiro Garza</a></div>
+                                        <p>"<%= allsermon.qoute %>"</p>
+                                    </div>
+                                    <div class="sermon-links">
+                                        <ul class="action-buttons">
+                                            <li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Watch Video"><i class="icon-video-cam"></i></a></li>
+                                            <li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Listen Audio"><i class="icon-headphones"></i></a></li>
+                                            <li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Download Audio"><i class="icon-cloud-download"></i></a></li>
+                                            <li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Download PDF"><i class="icon-download-folder"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <a href="/sermon/<%=allsermon._id%>/edit" class="btn btn-danger">Edit Sermon</a>
+                            </ul>
+                            
+                            <%  });  %>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 col-sm-7">
+                        <div class="element-block events-listing">
+                            <div class="events-listing-header">
+                                <a href="/events" class="pull-right basic-link">Todos los eventos</a>
+                                <h3 class="element-title">Próximos Eventos</h3><a href="/events/new" class="btn btn-danger">Add Event</a>
+                                <hr class="sm">
+                            </div>
+                            <% var i = 0; %>
+                            <% event.forEach(function(allevents){ %>
+                            
+                        
+                            <% if(i < 4){ %>
+                            <div class="events-listing-content">
+                                <div class="event-list-item event-dynamic">
+                                	<div class="event-list-item-date">
+                                    	<span class="event-date">
+                                        	<span class="event-day"><%=allevents.monthDay%></span>
+                                        	<span class="event-month"><%=allevents.month%>, <%=allevents.monthDay%></span>
+                                        </span>
+                                    </div>
+                                    <div class="event-list-item-info">
+                                    	<div class="lined-info">
+                                        	<h4><a href="/events/<%=allevents._id%>" class="event-title"><%=allevents.title%></a></h4>
+                                        </div>
+                                    	<div class="lined-info">
+                                        	<span class="meta-data"><i class="fa fa-clock-o"></i> <%=allevents.day%>, <span class="event-time"><%=allevents.time%></span></span>
+                                        </div>
+                                    	<div class="lined-info event-location">
+                                        	<span class="meta-data"><i class="fa fa-map-marker"></i> <span class="event-location-address"><%=allevents.address%></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="event-list-item-actions">
+                                    	<a href="/events/<%=allevents._id%>" class="btn btn-default btn-transparent">Ver Eventos</a>
+                                    	<ul class="action-buttons">
+                                        	<li title="Share event"><a href="#" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>
+                                        	<li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>
+                                        	<li title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <% i++; %>
+                            <% }  %>
+                            <% });  %>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+           	<div class="spacer-30"></div>
+           	<div class="lgray-bg padding-tb45">
+            	<div class="container">
+                   
+                            <h3>Blogs y Testimonios</h3><a href="/blogs/new" class="btn btn-danger">Add Blog</a>
+                            <hr class="sm" style="background:red;">
+                            <div class="row">
+                                
+                                <% var index = 0; %>
+                                <% blog.forEach(function(allblogs){ %>
+                                
+                               <% if(index == 0){ %>
+                                <div class="col-md-4">
+                                    <div class="very-latest-post format-standard">
+                                        <div class="title-row">
+                                            <a href="blog-post.html#comments" class="comments-go" title="10 comments"><i class="icon-dialogue-text"></i></a>
+                                            <h4>lo mas reciente</h4>
+                                        </div>
+                                        <a href="blogs/<%=allblogs._id%>" class="media-box post-thumb">
+                                            <img src="<%= allblogs.image %>" alt="">
+                                        </a>
+                                        <h3 class="post-title"><a href="blogs/<%=allblogs._id%>"><%= allblogs.title %></a></h3>
+                                        <div class="meta-data">by <a href="#"><%= allblogs.author.username %></a> <%= moment(allblogs.createdAt).fromNow() %> <a><%= allblogs.category%></a></div>
+                                        <p><%= allblogs.paragraph1.substring(0,400) %>...</p>
+                                        <p><a href="blogs/<%=allblogs._id%>" class="btn btn-primary">Continúa leyendo</a></p>
+                                    </div>
+                                </div>
+                                <%  }else if (index > 0 && index < 4){ %>
+                                <div class="col-md-8">
+                                    <ul class="blog-classic-listing">
+                                        <li class="format-standard">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <a href="blogs/<%=allblogs._id%>" class="media-box post-thumb">
+                                                        <img src="<%= allblogs.image %>" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <a href="blogs/<%=allblogs._id%>"><strong class="post-title"><%= allblogs.title %></strong></a>
+                                                    <div class="meta-data">by <a href="#"><%= allblogs.author.username %></a> <%= moment(allblogs.createdAt).fromNow() %><a> <%=allblogs.category%></a></div>
+                                                    <p><%= allblogs.paragraph1.substring(0,150) %>...</p>
+                                                    <p><a href="blogs/<%=allblogs._id%>"  class="basic-link">Continúa leyendo</a></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <% } index++; }); %>
+                            </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="spacer-30"></div>
+<div class="spacer-40"></div>
+            <div class="container">
+            <small class="text-muted uppercase t300 ls4 mb-1 d-block text-left">Personal</small>
+                 <hr class="sm">
+                <ul class="members-list row">
+                    <li class="col-md-2 col-sm-4 col-xs-6" style="padding: 5px;">
+                        <img src="images/staffsmall/ram.jpg" alt="" width="100" height="100">
+                        <h5>Ramiro Garza</h5>
+                        <span class="meta-data">Pastor Principal</span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/RefugioSeguroIglesia"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="gmail"><a href="https://twitter.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6" style="padding: 5px;">
+                        <img src="images/staffsmall/cris.JPG" alt="" width="100" height="100">
+                        <h5>Cristina Garza</h5>
+                        <span class="meta-data">Pastor Principal</span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/RefugioSeguroIglesia"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="gmail"><a href="https://twitter.com/"><i class="fa fa-google-plus"></i></a></li>                            -->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6" style="padding: 5px;">
+                        <img src="images/staffsmall/carlos_small.jpg" alt="" width="100" height="100">
+                        <h5>Carlos Salazar</h5>
+                        <span class="meta-data">Director de Alabanza</span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/RefugioSeguroIglesia"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="gmail"><a href="https://twitter.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6" style="padding: 5px;">
+                        <img src="images/staffsmall/Letty_small.jpg" alt="" width="100" height="100">
+                        <h5>Letty Cantu</h5>
+                        <span class="meta-data">Directora de Hospitalidad</span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6" style="padding: 5px;">
+                        <img src="images/staffsmall/samchange.JPG" alt="" width="100" height="100">
+                        <h5>Samanta Carillo</h5>
+                        <span class="meta-data">Líder del Centro de Información</span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/RefugioSeguroIglesia"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="gmail"><a href="https://twitter.com/"><i class="fa fa-google-plus"></i></a></li>                        -->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6" style="padding: 5px;">
+                        <img src="images/staffsmall/youthchange.JPG" alt="" width="100" height="100">
+                        <h5>Javier y Elsa Martinez </h5>
+                        <span class="meta-data">Pastores de Jóvenes</span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/RefugioSeguroIglesia"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="gmail"><a href="https://twitter.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                </ul>            
+            <br>
+            <br>
+                 
+            </div>
+        </div>
+   	</div>
+    <!-- End Body Content -->
+    <!-- Gallery updates -->
+    <!-- <div class="page-header parallax clearfix">
+    	<div id="contact-map"></div>
+    </div> -->
+    
+    
+
+    <!--   MAPS -->
+    <div id='map' style='width: 100%; height: 400px;'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibGVvZzA0IiwiYSI6ImNrNGVkMGVlMDBjZHYzbm5vd2xvaWc4dmsifQ.S7vzAxEhmrcvqFdeyncy-A';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/leog04/ckcjj5vk73mic1imnskyz46oi', // stylesheet location
+    center: [-98.029575, 26.190619], // starting position [lng, lat]
+    interactive: false,
+    zoom: 14 // starting zoom
+    });
+
+    
+    var marker = new mapboxgl.Marker()
+    .setLngLat([-98.029575, 26.190619])
+    .addTo(map);
+
+    map.scrollZoom.disable();
+
+    </script>
+
+    <!-- Start site footer -->
+
+  
+  
+    <% include ./partials/rsfooter %>
+  
+  
+  
+  
+    <!-- End site footer -->
+  	<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>  
+</div>
+<!-- Event Directions Popup -->
+<div class="quick-info-overlay">
+	<div class="quick-info-overlay-left accent-bg">
+        <a href="#" class="btn-close"><i class="icon-delete"></i></a>
+    	<div class="event-info">
+    		<h3 class="event-title"></h3>
+      		<div class="event-address"></div>
+            <a href="" class="btn btn-default btn-transparent btn-permalink">Full details</a>
+        </div>
+    </div>
+	<div class="quick-info-overlay-right">
+      	<div id="event-directions"></div>
+    </div>
+</div>
+<!-- Event Contact Modal Window -->
+<form class="modal fade" id="Econtact" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="Econtact" aria-hidden="true" action="/" method="POST">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Contact Event Manager <span class="accent-color"></span></h4>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" id="fname" name="fname" class="form-control" placeholder="First name (Required)">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="lname" name="lname" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Your email (Required)" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" id="phone" name="phone" class="form-control" placeholder="Your phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea rows="3" cols="5" class="form-control" placeholder="Additional notes" name="message"></textarea>
+                </div>
+            </div>
+            <input type="submit" name="donate" class="btn btn-primary btn-lg btn-block" value="Contact Now">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p class="small short">Call (956) 961-4367</p>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+
+<!-- <div class="modal fade" id="EOffering" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="EOffering" aria-hidden="true">
+ <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Online Offering <span class="accent-color"></span></h4>
+      </div>
+      <div class="modal-body">
+       <form id="myForm" action="/charge" method="POST">
+                           <label>Amount:</label>
+           <div class="row">
+               <div class="col-md-6">
+               <input class="form-control" id="hello" type ="number"  min="0.01" step="1.00" max="2500" value="5.00" name="Amount">
+               </div>
+             <div class="col-md-6">
+                   <script src="https://checkout.stripe.com/checkout.js"></script>
+                       <input type="hidden" id="stripeToken" name="stripeToken" />
+                      <input type="hidden" id="stripeEmail" name="stripeEmail" />
+                  <button type="submit" class="btn btn-primary form-control" id="customButton">Proceed with payment</button>   
+                </div>
+                    
+            </div>
+            
+<script type="text/javascript" src="js/stripe.js"></script>
+                        
+            
+            
+            
+            
+       </form>
+    </div>
+    <div class="modal-footer">
+     <p class="small short">If you would prefer to call in for inquiries, please call 1800.785.876</p>
+    </div>
+    </div>
+ </div>
+</div> -->
+
+
+
+
+
+
+<script src="js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
+<script src="vendor/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
+<script src="js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="js/bootstrap.js"></script> <!-- UI -->
+<script src="js/init.js"></script> <!-- All Scripts -->
+<script src="js/home.js"></script> <!-- All Scripts -->
+<script src="vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+<script src="vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+<script src="vendor/mediaelement/mediaelement-and-player.min.js"></script> <!-- MediaElements --> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANr_qvvNemkl5ttYfoveX-1lsGkEVM9UI"></script>
+
+
+<script type="text/javascript">
+// var geocoder = new google.maps.Geocoder();
+// var address = "3211 N Victoria RD - Donna, Texas - 78537 USA"; //Add your address here, all on one line.
+// var latitude;
+// var longitude;
+// var color = "#3bafda"; //Set your tint color. Needs to be a hex value.
+
+// function getGeocode() {
+// 	geocoder.geocode( { 'address': address}, function(results, status) {
+// 		if (status == google.maps.GeocoderStatus.OK) {
+//     		latitude = results[0].geometry.location.lat();
+// 			longitude = results[0].geometry.location.lng(); 
+// 			initGoogleMap();   
+//     	} 
+// 	});
+// }
+
+// function initGoogleMap() {
+// 	var styles = [
+// 	    {
+// 	      stylers: [
+// 	        { saturation: -100 }
+// 	      ]
+// 	    }
+// 	];
+	
+// 	var options = {
+// 		mapTypeControlOptions: {
+// 			mapTypeIds: ['Styled']
+// 		},
+// 		center: new google.maps.LatLng(latitude, longitude),
+// 		zoom: 13,
+// 		scrollwheel: false,
+// 		navigationControl: false,
+// 		mapTypeControl: false,
+// 		zoomControl: true,
+// 		disableDefaultUI: true,	
+// 		mapTypeId: 'Styled'
+// 	};
+// 	var div = document.getElementById('contact-map');
+// 	var map = new google.maps.Map(div, options);
+// 	marker = new google.maps.Marker({
+// 	    map:map,
+// 	    draggable:false,
+// 	    animation: google.maps.Animation.DROP,
+// 	    position: new google.maps.LatLng(latitude,longitude)
+// 	});
+// 	var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
+// 	map.mapTypes.set('Styled', styledMapType);
+	
+// 	var infowindow = new google.maps.InfoWindow({
+// 	      content: "<div class='iwContent'>"+address+"</div>"
+// 	});
+// 	google.maps.event.addListener(marker, 'click', function() {
+// 	    infowindow.open(map,marker);
+// 	  });
+	
+	
+// 	bounds = new google.maps.LatLngBounds(
+// 	  new google.maps.LatLng(-84.999999, -179.999999), 
+// 	  new google.maps.LatLng(84.999999, 179.999999));
+
+// 	rect = new google.maps.Rectangle({
+// 	    bounds: bounds,
+// 	    fillColor: color,
+// 	    fillOpacity: 0.2,
+// 	    strokeWeight: 0,
+// 	    map: map
+// 	});
+// }
+// google.maps.event.addDomListener(window, 'load', getGeocode);
+</script>
+
+
+
+</body>
+</html>

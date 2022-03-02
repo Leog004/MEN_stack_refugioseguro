@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Refugio Seguro</title>
+<meta name="description" content="Refugio Seguro es un CASA DE RESTAURACIÓN, SANIDAD, Y LIBERACIÓN">
+<meta name="keywords" content="Refugio Seguro, Pharr, Church, Spanish Church ">
+<meta name="news_keywords" content="Church, Pharr, Refugio Seguro" />
+<meta name="author" content="Refugio Seguro">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="UxCFbJOb4uqdq5KQECIFnNsbLv5tNL2oQS6d2eQ1rMw">
+<!-- CSS
+  ================================================== -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/vendor/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="/vendor/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
+<link href='/vendor/fullcalendar/fullcalendar.css' rel='stylesheet'>
+<link href='/vendor/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print'>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+<link href="/css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
+<!-- Color Style -->
+<link href="/colors/color5.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/png" href="images/favicon/icon.png" sizes="32x32">
+<!-- SCRIPTS
+  ================================================== -->
+<script src="/js/modernizr.js"></script><!-- Modernizr -->
+
+
+<style>
+    
+    
+    .header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .header {
+    background: url('https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/56290985_1187821251396472_4184616516580278272_n.jpg?_nc_cat=111&_nc_ht=scontent-dfw5-1.xx&oh=7526441c305273e6979a22408ee78d82&oe=5D484705') black no-repeat center center scroll;
+    max-height: 19rem;
+    min-height:19rem;
+      
+  }
+  .header video {
+    display: none;
+  }
+  
+  video{
+      display:none;
+  }
+ 
+}
+
+
+@media only screen and (max-width: 992px){
+  .header {
+    background: url('https://images.unsplash.com/photo-1508829040592-72f179f8a73f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80') no-repeat center center scroll;
+    max-height: 19rem;
+    min-height:19rem;
+      
+  }
+  .header video {
+    display: none;
+  }
+  
+  video{
+      display:none;
+  }
+
+  .overlay{
+    display: none;
+  }
+ 
+
+}
+
+    
+</style>
+
+
+
+</head>
+<body>
+<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<div class="body"> 
+	<!-- Start Site Header -->
+	<header class="site-header">
+    	<div class="container for-navi">
+        	<div class="site-logo">
+            <h1>
+                <a href="/">
+                    <span class="logo-icon"><img src="/images/Untitled%20design.png"></span>
+                </a>
+            </h1>
+            </div>
+            <!-- Main Navigation -->
+           <% include ../partials/rsheader  %>
+            <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+    	</div>
+	</header>
+	<!-- End Site Header -->
+    <!-- Start Page Header -->
+<div class="header">
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="media/RSChurchPromoV2.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    </div>
+  </div>
+</div>
+    <!-- End Page Header -->
+    <!-- Breadcrumbs -->
+    <div class="lgray-bg breadcrumb-cont">
+    	<div class="container">
+          	<ol class="breadcrumb">
+            	<li><a href="/">Home</a></li>
+            	<li class="active">About Us</li>
+          	</ol>
+        </div>
+    </div>
+    <!-- Start Body Content -->
+  	<div class="main" role="main">
+    	<div id="content" class="content full">
+    	    <% var index = 0;    %>
+    	    <% home.forEach(function(allhome){%>
+    	    <% if(index == 0){  %>
+        	<div class="container">
+               	<h2><%=allhome.title%></h2>
+              	<hr class="sm">
+                <h4><%=allhome.subTitle%></h4>
+               	<p><%=allhome.paragraph%></p>
+               	<p><%=allhome.paragraphSecond%></p>
+                <hr class="fw">
+                <h3>Nuestros Pastores </h3>
+                <div class="spacer-10"></div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                      	<div class="grid-item staff-item format-standard">
+                        	<div class="grid-item-inner">
+                          		<a href="staff.html" class="media-box">
+                                	<img src="images/DSC03615.jpg" alt="">
+                               	</a>
+                          		<div class="grid-content">
+                                	<div class="staff-item-name">
+                            			<h5>Ramiro Garza</h5>
+                                        <span class="meta-data">Pastor Principal</span>
+                                    </div>
+                                    <ul class="social-icons-colored">
+                                        <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                            		<p>Nuestra pasión es
+servirle al pueblo de Dios con todo nuestro corazón. Nuestro anhelo es que todas las personas
+que asistan o visiten nuestra iglesia se sientan como en casa, sintiendo el amor de Dios en todo
+tiempo!</p>
+                          		</div>
+                        	</div>
+                      	</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      	<div class="grid-item staff-item format-standard">
+                        	<div class="grid-item-inner">
+                          		<a href="staff.html" class="media-box">
+                                	<img src="images/DSC03625.JPG" alt="">
+                               	</a>
+                          		<div class="grid-content">
+                                	<div class="staff-item-name">
+                            			<h5>Cristina Garza</h5>
+                                        <span class="meta-data">Pastor Principal </span>
+                                    </div>
+                                    <ul class="social-icons-colored">
+                                        <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                            		<p>Refugio Seguro es una iglesia donde puedes experimentar la presencia de Dios por medio de la
+alabanza, palabra, y ministración en el altar. Te invitamos!</p>
+                          		</div>
+                        	</div>
+                      	</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      	<div class="grid-item staff-item format-standard">
+                        	<div class="grid-item-inner">
+                          		<a href="staff.html" class="media-box">
+                                	<img src="images/DSC03632.JPG" alt="">
+                               	</a>
+                          		<div class="grid-content">
+                                	<div class="staff-item-name">
+                            			<h5>Javier y Elsa Martinez</h5>
+                                        <span class="meta-data">Pastores de Jóvenes</span>
+                                    </div>
+                                    <ul class="social-icons-colored">
+                                        <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                            		<p>Hello this is Pastor Javier and Elsa, and we’d like to invite you to Restart
+Youth Ministry, where you can experience not only the love of God, but make really awesome
+friends. We hope to see you soon!</p>
+                          		</div>
+                        	</div>
+                      	</div>
+                    </div>
+                </div>
+                <div class="spacer-20"></div>
+            </div>
+                                    <div class="spacer-40"></div>
+            <div class="container">
+                                        <div class="spacer-40"></div>
+                <div class="col-md-4 col-sm-12">
+                      	<div class="grid-item staff-item format-standard">
+                        	<div class="grid-item-inner">
+                          		<a href="staff.html" class="media-box">
+                                	 <img src="images/DSC036621.jpg" alt="">
+                               	</a>
+                          		<div class="grid-content">
+                                	<div class="staff-item-name">
+                            			<h5>Personal</h5>
+                                        <span class="meta-data">Equipo RS</span>
+                                    </div>
+                                    <ul class="social-icons-colored">
+                                        <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                            		<p>Así que, hermanos míos amados, estad firmes y constantes, creciendo en la obra del Señor siempre, sabiendo que vuestro trabajo en el Señor no es en vano.  1 Corintios 15:58</p>
+                          		</div>
+                        	</div>
+                      	</div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1 vol-sm-12">
+                        
+               	<h2><%=allhome.Secondtitle%></h2>
+              	<hr class="sm">
+                <h4><%=allhome.Secondsubtitle%></h4>
+                <p><%=allhome.Secondparagraph%></p>
+                <hr class="fw">
+                
+                    </div>
+            </div>
+            
+    <% }    index++;   }); %>
+            
+            
+            <div class="spacer-50"></div>
+            <div class="container">
+                <h3>Staff</h3>
+                <hr class="sm">
+                <ul class="members-list row">
+                    <li class="col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/staffsmall/Cynthia_small.jpg" alt="" width="100" height="100">
+                        <h5>Cynthia Salazar</h5>
+                        <span class="meta-data">Directora de Redes Sociales </span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/RefugioSeguroIglesia"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="gmail"><a href="https://twitter.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/staffsmall/Letty_small.jpg" alt="" width="100" height="100">
+                        <h5>Letty Cantu</h5>
+                        <span class="meta-data">Directora de Hospitalidad</span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/Mayra.png" alt="" width="100" height="100">
+                        <h5>Mayra Reyna</h5>
+                        <span class="meta-data">Directora de Saludadoras</span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/staffsmall/melinda_small.jpg" alt="" width="100" height="100">
+                        <h5>Melina Paredes</h5>
+                        <span class="meta-data">Lider de Danza </span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/Noemi.png" alt="" width="100" height="100">
+                        <h5>Noemi Ramirez</h5>
+                        <span class="meta-data">Asistente Líder de RS KIDZ </span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li class="col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/DSC03636.JPG" alt="" width="100" height="100">
+                        <h5>Samanta Carillo</h5>
+                        <span class="meta-data">Líder del Centro de Información</span>
+                        <!--<ul class="social-icons-colored">-->
+                        <!--    <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>-->
+                        <!--    <li class="googleplus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>-->
+                        <!--</ul>-->
+                    </li>
+                </ul>   
+                            <div class="spacer-50"></div>
+
+            </div>
+        </div>
+   	</div>
+    <!-- End Body Content -->
+    
+                
+    <!-- Start site footer -->
+  
+  
+  
+    <% include ../partials/rsfooter %>
+  
+  
+  
+  
+    <!-- End site footer -->
+  	<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>  
+</div>
+<script src="/js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
+<script src="/vendor/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
+<script src="/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="/js/bootstrap.js"></script> <!-- UI -->
+<script src="/js/init.js"></script> <!-- All Scripts -->
+<script src="/vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+<script src="/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+<script src="/vendor/mediaelement/mediaelement-and-player.min.js"></script> <!-- MediaElements --> 
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</body>
+</html>

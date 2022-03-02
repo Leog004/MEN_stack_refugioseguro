@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Refugio Seguro</title>
+<meta name="description" content="Refugio Seguro es un CASA DE RESTAURACIÓN, SANIDAD, Y LIBERACIÓN">
+<meta name="keywords" content="Refugio Seguro, Pharr, Church, Spanish Church ">
+<meta name="news_keywords" content="Church, Pharr, Refugio Seguro" />
+<meta name="author" content="Refugio Seguro">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="UxCFbJOb4uqdq5KQECIFnNsbLv5tNL2oQS6d2eQ1rMw">
+<!-- CSS
+  ================================================== -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="vendor/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="vendor/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+<link href="css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
+<!-- Color Style -->
+<link href="colors/color5.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/png" href="images/favicon/icon.png" sizes="32x32">
+<!-- SCRIPTS
+  ================================================== -->
+<script src="js/modernizr.js"></script><!-- Modernizr -->
+</head>
+<body>
+<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<div class="body"> 
+	<!-- Start Site Header -->
+	<header class="site-header">
+    	<div class="container for-navi">
+        	<div class="site-logo">
+            <h1>
+                <a href="/">
+                    <span class="logo-icon"><img src="media/Logo2.png"></span>
+                </a>
+            </h1>
+            </div>
+            <!-- Main Navigation -->
+            <% include ../partials/rsheader %>
+            <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+    	</div>
+	</header>
+	<!-- End Site Header -->
+    <!-- Start Page Header -->
+    <div class="page-header parallax clearfix">
+    	<div class="page-header-overlay" style="background-image:url(https://images.unsplash.com/photo-1506784365847-bbad939e9335?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80&h=300);"></div>
+        <div class="title-subtitle-holder">
+        	<div class="title-subtitle-holder-inner">
+    			<h2>Events</h2>
+        	</div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+    <!-- Breadcrumbs -->
+    <div class="lgray-bg breadcrumb-cont">
+    	<div class="container">
+          	<ol class="breadcrumb">
+            	<li><a href="/">Home</a></li>
+            	<li class="active">Events Grid</li>
+          	</ol>
+        </div>
+    </div>
+    <!-- Start Body Content -->
+  	<div class="main" role="main">
+    	<div id="content" class="content full">
+        	<div class="container">
+                <div class="events-listing-header">
+                    <ul class="sort-source" data-sort-id="events" data-option-key="filter">
+                        <li data-option-value="*" class="active"><a href="#">Show All</a></li>
+                        <li data-option-value=".service"><a href="#">Service</a></li>
+                        <li data-option-value=".womanService"><a href="#">womanService</a></li>
+                        <li data-option-value=".prayers"><a href="#">Prayers</a></li>
+                        <li data-option-value=".celebrations"><a href="#">Celebrations</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul class="sort-destination" data-sort-id="events">
+                        <% event.forEach(function(allevents){ %>
+                        <li class="col-md-4 col-sm-6 event-list-item event-item event-dynamic grid-item format-standard <%=allevents.category%>">
+                            <div class="grid-item-inner">
+                             	<a href="/events/<%=allevents._id%>" class="media-box">
+                                	<img src="<%=allevents.image%>"  alt="">
+                                	
+                                	<%if (allevents.category === "service"){ %>
+                                	<span class="label label-primary" style="position:absolute; top: 0; left: 0;"><%=allevents.category%></span>
+                                	<% } %>
+                                	
+                                	<%if (allevents.category === "womanService"){ %>
+                                	<span class="label label-default" style="position:absolute; top: 0; left: 0; background:purple"><%=allevents.category%></span>
+                                	<% } %>
+                                	
+                                	<%if (allevents.category === "prayers"){ %>
+                                	<span class="label label-warning" style="position:absolute; top: 0; left: 0;"><%=allevents.category%></span>
+                                	<% } %>
+                                	
+                                	<%if (allevents.category === "celebrations"){ %>
+                                	<span class="label label-success" style="position:absolute; top: 0; left: 0;"><%=allevents.category%></span>
+                                	<% } %>
+                                </a>
+                                <div class="grid-content">
+                                	<h3><a href="single-event.html" class="event-title"></a><%=allevents.title%></h3>
+                                    <span class="meta-data"><i class="fa fa-calendar"></i> <span class="event-date"><%=allevents.month%> <%=allevents.monthDay%>, 2019</span> at <span class="event-time"><%=allevents.time%></span></span>
+                                    <span class="meta-data event-location-address"><i class="fa fa-map-marker"></i> <%=allevents.address%></span>
+                                    <span class="meta-data event-location-author"><i class="fa fa-user"></i> By: <%=allevents.author.username%></span>
+                                    
+      <% if(currentUser && currentUser.isAdmin){ %>
+      
+        <a class="btn btn-sm btn-warning" href="/events/<%=allevents._id%>/edit">Edit</a>
+      <form action="/events/<%=allevents._id%>?_method=DELETE" method="POST" style="display:inline;">
+      <button type="submit" class="btn btn-sm btn-danger" value="DELETE" style="display:inline">Delete</button>
+      </form>
+      <% } %>
+                                    
+                                    
+                                </div>
+                                <div class="grid-footer clearfix">
+                            		<a href="/events/<%=allevents._id%>" class="pull-right btn btn-primary btn-sm">View Event</a>
+                                    <ul class="action-buttons">
+                                        <li title="Share event"><a href="#" data-trigger="focus" data-placement="right" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>
+                                        <li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>
+                                        <li title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <% }); %>
+                    </ul>
+                </div>
+         	</div>
+        </div>
+   	</div>
+    <!-- End Body Content -->
+    
+ <!-- Start site footer -->
+    <% include ../partials/rsfooter %>
+    <!-- End site footer -->
+  	<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>  
+</div>
+<!-- Event Directions Popup -->
+<div class="quick-info-overlay">
+	<div class="quick-info-overlay-left accent-bg">
+        <a href="#" class="btn-close"><i class="icon-delete"></i></a>
+    	<div class="event-info">
+    		<h3 class="event-title"></h3>
+      		<div class="event-address"></div>
+            <a href="" class="btn btn-default btn-transparent btn-permalink">Full details</a>
+        </div>
+    </div>
+	<div class="quick-info-overlay-right">
+      	<div id="event-directions"></div>
+    </div>
+</div>
+<!-- Event Contact Modal Window -->
+<div class="modal fade" id="Econtact" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="Econtact" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Contact Event Manager <span class="accent-color"></span></h4>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" name="fname" class="form-control" placeholder="First name (Required)">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="lname" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Your email (Required)">
+                </div>
+                <div class="col-md-6">
+                    <input type="number" name="phone" class="form-control" placeholder="Your phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea rows="3" cols="5" class="form-control" placeholder="Additional notes"></textarea>
+                </div>
+            </div>
+            <input type="submit" name="donate" class="btn btn-primary btn-lg btn-block" value="Contact Now">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p class="small short">If you would prefer to call in for inquiries, please call 1800.785.876</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Event Register Tickets -->
+<div class="ticket-booking-wrapper">
+    <a href="#" class="ticket-booking-close label-danger"><i class="icon icon-delete"></i></a>
+    <div class="ticket-booking">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3><strong>Book your</strong> <span>tickets</span></h3>
+                </div>
+                <div class="col-md-9">
+                    <div class="event-ticket ticket-form">
+                        <div class="event-ticket-left">
+                            <div class="ticket-handle"></div>
+                            <div class="ticket-cuts ticket-cuts-top"></div>
+                            <div class="ticket-cuts ticket-cuts-bottom"></div>
+                        </div>
+                        <div class="event-ticket-right">
+                            <div class="event-ticket-right-inner">
+                                <div class="row">
+                                    <div class="col-md-9 col-sm-9">
+                                        <span class="meta-data">Your ticket for</span>
+                                        <h4 id="dy-event-title"></h4>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <span class="meta-data">Tickets count</span>
+                                        <select class="form-control input-sm">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="event-ticket-info">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="ticket-col" id="dy-event-date"></p>
+                                        </div>
+                                        <div class="col">
+                                            <a href="#" class="btn btn-warning btn btn-block ticket-col">Book</a>
+                                        </div>
+                                        <div class="col">
+                                            <p id="dy-event-time">Starts </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="event-location" id="dy-event-location"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   	</div>
+</div>
+<script src="js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
+<script src="vendor/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
+<script src="js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="js/bootstrap.js"></script> <!-- UI -->
+<script src="js/init.js"></script> <!-- All Scripts -->
+<script src="vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+<script src="vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+<script src="vendor/mediaelement/mediaelement-and-player.min.js"></script> <!-- MediaElements --> 
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</body>
+</html>

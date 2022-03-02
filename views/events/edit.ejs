@@ -1,0 +1,87 @@
+
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+           <h1 style="text-align:center;">Edit Event: <%=event.title%></h1>
+           <div style="width:80%; margin: 20px auto;">
+                <form action="/events/<%=event._id%>?_method=PUT" method="POST">
+                    <div class="form-group col-xs-6">
+                        <label>Title: </label>
+                        <input class="form-control" type ="text" value="<%=event.title%>" name="event[title]">
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label>Image Url: </label>
+                        <input class="form-control" type ="text" value="<%=event.image%>" name="event[image]">
+                    </div>
+                    <div class="form-group">
+                        <label>Discription: </label>
+                        <textarea class="form-control" rows="8"  name="event[discription]"><%=event.discription%></textarea>
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <label>Preaching: </label>
+                        <input class="form-control" type ="text" value="<%=event.preaching%>" name="event[preaching]">
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <label>Sub-Discription: </label>
+                        <input class="form-control" type ="text" value="<%=event.subDiscription%>" name="event[subDiscription]">
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <label>Address: </label>
+                        <input class="form-control" type ="text" value="<%=event.address%>" name="event[address]">
+                    </div>
+                    
+                                        
+    <div class="form-group col-xs-3">
+        <label>Category: </label>
+        <div class="">
+          <select class="form-control" value="<%=event.category%>" name="event[category]">
+            <option name="" value="">Choose Category</option>
+            <option name="service" value="service">service</option>
+            <option name="womanService" value="womanService">woman Service</option>
+            <option name="prayers" value="prayers">Prayers</option>
+            <option name="celebrations" value="celebrations">celebrations</option>
+          </select>
+        </div>
+        </div>
+                    
+                    
+                    <div class="form-group col-xs-4">
+                        <label>Month: </label>
+                        <input class="form-control" type ="text" value="<%=event.month%>" name="event[month]">
+                    </div>
+                    
+                    <div class="form-group col-xs-2">
+                        <label>Month Day (1-31): </label>
+                        <input class="form-control" type ="text" value="<%=event.monthDay%>" name="event[monthDay]">
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <label>Day: (Monday - Sunday) </label>
+                        <input class="form-control" type ="text" value="<%=event.day%>" name="event[day]">
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <label>Time: (2:00 PM) </label>
+                        <input class="form-control" type ="text" value="<%=event.time%>" name="event[time]">
+                    </div>
+                    
+                    
+                    
+      <label for="example-date-input" class="col-xs-2 col-form-label">Date of event:</label>
+  <div class="form-group col-xs-4">
+    <input class="form-control" type="date" id="example-date-input" name="event[dateOfEvent]">
+  </div>             
+  
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    </div>
+                    
+
+
+                </form>
+                                    <a href="/">Back</a> 
+           </div>
+           
+    </div>
+</div>
+
+<% include ../partials/footer %>

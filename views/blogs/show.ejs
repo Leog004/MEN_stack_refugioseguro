@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Refugio Seguro | Blogs</title>
+<meta name="description" content="Refugio Seguro es un CASA DE RESTAURACIÓN, SANIDAD, Y LIBERACIÓN">
+<meta name="keywords" content="Refugio Seguro, Pharr, Church, Spanish Church ">
+<meta name="news_keywords" content="Church, Pharr, Refugio Seguro" />
+<meta name="author" content="Refugio Seguro">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="UxCFbJOb4uqdq5KQECIFnNsbLv5tNL2oQS6d2eQ1rMw">
+
+  <meta property="og:type"          content="articles" />
+  <meta property="og:title"         content="<%=blog.title%>" />
+  <meta property="og:image"         content="<%=blog.image%>" />
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  
+  
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="/blog/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="/blog/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/blog/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="/blog/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="/blog/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="/images/favicon/icon.png" sizes="32x32">
+
+  <!-- Main Stylesheet File -->
+  <link href="/blog/css/style.css" rel="stylesheet">
+  <style>
+      
+      .img-small{
+          height:auto; display: block;margin-left: auto; margin-right: auto;
+      }
+      
+      @media only screen and (max-width: 600px)
+      {
+             .img-small{
+          width:100%; height:auto; display: block;margin-left: auto; margin-right: auto;
+                        }
+                        
+                      .post-intro{
+                        font-size:22px !important;
+                      }
+                      .intro-single {
+                        padding: 0px;
+                        padding-top:9rem;
+            }
+      }
+      
+     @media only screen and (max-width: 1000px)
+      {
+             .img-small{
+          width:100%; height:350px; display: block;margin-left: auto; margin-right: auto;
+                         }
+      
+      }
+  </style>
+
+  <!-- =======================================================
+    Theme Name: EstateAgency
+    Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+
+  <!--/ Nav Star /-->
+    <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="/" class="navbar-brand text-brand"><span class="logo-icon"><img src="/media/Logo1.png" style="width:200px"></span>
+                </a>
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/events">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/blogs">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+          <!--  <li class="nav-item">-->
+          <!--  <a class="nav-link" href="contact.html">Give</a>-->
+          <!--</li>-->
+
+          	<%   if(currentUser){ %>
+          	      <li><a class="nav-item" href="/logout"><span style="color:#fff; font-weight:700; background:red; padding:8px; border-radius:5px;">Logout</span></a></li>
+                	
+                	<% }else{ %>
+                        <li class="nav-item"><a class="nav-link" href="/login">Login</a> </li>
+         
+                	<% }%>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Single star /-->
+  <section class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <div class="title-single-box">
+            <h1 class="title-single"><%=blog.title%></h1>
+                                    <h6 class="text-left"><%=blog.subTitle%></h6>
+
+            <span class="color-text-a">News Event</span>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <div class="post-share" style="padding: 35px;">
+              <span>Share: </span>
+              <ul class="list-inline socials">
+                <li class="list-inline-item">
+                  <div class="fb-share-button" data-href="http://www.refugioseguro.com/blogs/<%=blog._id%>" data-layout="button" data-size="small"><a target="_blank" href="http://www.refugioseguro.com/blogs/<%=blog._id%>" class="fb-xfbml-parse-ignore">Share</a></div>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Intro Single End /-->
+
+  <!--/ News Single Star /-->
+  <section class="news-single nav-arrow-b">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+              <div class="news-img-box" style="margin:0 auto;">
+                <img src="<%=blog.image%>" alt="" class="img-fluid img-small">
+            </div>
+        </div>
+        <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <div class="post-information">
+            <ul class="list-inline text-center color-a">
+              <li class="list-inline-item mr-2">
+                <strong>Author: </strong>
+                <span class="color-text-a"><%=blog.author.username%></span>
+              </li>
+              <li class="list-inline-item mr-2">
+                <strong>Category: </strong>
+                <span class="color-text-a"><%=blog.category%></span>
+              </li>
+              <li class="list-inline-item">
+                <strong>Date: </strong>
+                <span class="color-text-a"><%=moment(blog.createdAt).fromNow()%></span>
+              </li>
+              <li class="list-inline-item">
+               <form action="/blogs/<%= blog._id %>/likes" method="POST" name="likeform">
+                <strong><a href="javascript:getlike();"><i class="fas fa-thumbs-up"></i></a></strong>
+                
+                <% var index = 0; %>
+               <% blog.Likes.forEach(function(foundLikes){ %>
+                    <% if(index == 0){ %>
+                    <span class="color-text-a"><%= blog.Likes.length %></span>
+                 <% } index++; });  %>
+                    <input type="checkbox" id="checkbox" name="like[likes]" style="display:none;">
+                  </form>
+              </li>
+            </ul>
+          </div>
+          <div class="post-content color-text-a" style="white-space: pre-wrap;">
+            <p class="post-intro" style="display: inline;">
+              <%= blog.boldParagraph %>
+            </p>
+            <p style="display: inline;">
+              <%=blog.paragraph1 %>
+            </p>
+            <p style="display: inline;">
+               <%=blog.paragraph2 %>
+            </p>
+            <blockquote class="blockquote">
+              <p class="mb-4"> <%=blog.qoute%></p>
+
+              <% if(blog.qouteAuthor){ %>  
+              <footer class="blockquote-footer">
+                <strong> <%=blog.qouteAuthor%></strong>
+              </footer>
+              <% } %> 
+            </blockquote>
+            <p style="display: inline;">
+              <%=blog.paragraph3 %>
+            </p>
+          </div>
+          <div class="post-footer">
+            <div class="post-share">
+              <span>Share: </span>
+              <ul class="list-inline socials">
+                <li class="list-inline-item">
+                  <div class="fb-share-button" data-href="http://www.refugioseguro.com/blogs/<%=blog._id%>" data-layout="button" data-size="small"><a target="_blank" href="http://www.refugioseguro.com/blogs/<%=blog._id%>" class="fb-xfbml-parse-ignore">Share</a></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <style>
+    
+.comment-wrapper .panel-body {
+    max-height:650px;
+    overflow:auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
+}
+  </style>
+  
+  
+  
+  <!--/ News Single End /-->
+  <div class="container">
+    <div class="col-md-8" style="margin: 0 auto;">
+        <div class="comment-wrapper" style="margin:20px 0;">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    Leave a comment!
+                </div>
+                <div class="panel-body">
+                  <form action="/blogs/<%= blog._id %>/comments" method="POST">
+                    <textarea class="form-control" placeholder="Leave a comment..." name="comment[text]" rows="3"></textarea>
+                    <br>
+                    <button  type="submit" class="btn btn-info pull-right">Post</button>
+                  </form>
+                    <div class="clearfix"></div>
+                    <hr>
+                    <ul class="media-list" style=" padding:10px;">
+                      
+                      <% blog.comments.forEach(function(comment){ %>
+                      
+                      
+                    
+                        <li class="media">
+                            <a href="#" class="pull-left" style="margin-top: -12px;">
+                            <%  if(comment.author.username == "Anonymous"){ %>
+                                <img src="https://gamepedia.cursecdn.com/cod_esports_gamepedia_en/archive/1/1d/20180401162348%21Unknown_Infobox_Image_-_Player.png" alt="" style="border-radius:50px; margin-right:20px;">
+                                
+                             
+                              <% }else if (comment.author.isAdmin){ %>
+                              
+                               <img src="/images/rsLogo.png" alt="" style="border-radius:50px; margin-right:20px;">
+                              
+                              
+                              
+                              <% }else{ %>
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Still_Life_with_Bible_-_My_Dream.jpg" alt="" style="border-radius:50px; margin-right:20px;">
+                              
+                             <% } %>
+                            </a>
+                            <div class="media-body">
+                                <span class="text-muted pull-right">
+                                    <small class="text-muted"><%=moment(comment.createdAt).fromNow()%></small>
+                                </span>
+                                <strong class="text-success"><%=comment.author.username%></strong>
+                                <p>
+                                   <%= comment.text %>
+                                </p>
+                            </div>
+                           
+                             
+                        <% if(currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                          
+                        <form action="/blogs/<%=blog._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit" class="ui red small header reply" style="background-color:#fff; cursor:pointer;" value="DELETE">Delete</button>
+                        </form>
+                        <% } %>
+                        
+        <% });   %>
+                        </li>
+                        
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+  
+  <!--/ footer Star /-->
+  <footer class="site-footer">
+       	<div class="container">
+    		<div class="site-footer-top">
+            	<div class="row" style="padding:20px;">
+            	    <% var index = 0; %>
+            	    <% home.forEach(function(allhome){%>
+            	    <% if(index == 0){ %>
+                	<div class="col-md-4 widget footer_widget text_widget">
+                        <h4>About our church</h4>
+                        <hr class="sm">
+                        <p style="text-align:left;"><%=allhome.paragraph %></p>
+                    </div>
+                    <% } index++; %>
+                    <%  }); %>
+<!--
+                	<div class="col-md-4 widget footer_widget twitter_widget">
+                    	<h4>Twitter feeds</h4>
+                        <hr class="sm">
+                      	<ul class="twitter-widget"></ul>
+            		</div>
+-->
+                	<div class="col-md-4 widget footer_widget twitter_widget">
+                    	<h4>Facebook feeds</h4>
+                        <hr class="sm">
+                      	<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRefugioSeguroIglesia%2Fposts%2F1136396179872313&width=300" width="100%" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            		</div>
+                	<div class="col-md-4 widget footer_widget newsletter_widget">
+                        <h4>News subscription</h4>
+                        <hr class="sm">
+                        <p style="text-align:left; padding-left:20px;">Subscribe to our newsletter in order to receive the latest new &amp; articles. We promise we won't spam your inbox!</p>
+                        <div class="input-group">
+                            <span class="input-group-addon"></span>
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">Go!</button>
+                            </span>
+                        </div>
+            		</div>
+               	</div>
+        		<!-- Quick Info -->
+        		<div class="quick-info" style="margin-top:40px; background:#555555; padding:20px; border-radius:5px;">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <h4><i class="fa fa-clock-o"></i> Service Times</h4>
+                            <p style="color:#fff;">Sundays - 11:00 AM (EN)<br>Domingo - 2:00 pm (ESP)<br>Wednesday - 7:00 pm</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <h4><i class="fa fa-map-marker"></i> Our Location</h4>
+                            <p style="color:#fff;">3211 N Victoria RD<br>Donna, Texas</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <h4><i class="fa fa-envelope"></i> Contact Info</h4>
+                            <p style="color:#fff;">11 - 00 - 653240<br>leog4za@gmail.com</p>
+                        </div>
+                    </div>
+            	</div>
+        		<div class="site-footer-bottom" style="margin-top:20px;">
+            		<div class="row">
+                		<div class="col-md-12 copyrights-coll">
+        					&copy; 2019 <a href="http://lgnetworkdesign.com" target="_blank">LGNetworkDesign.</a> All Rights Reserved
+            			</div>
+                   	</div>
+               	</div>
+           	</div>
+        </div>
+    </footer>
+  <!--/ Footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="/blog/lib/jquery/jquery.min.js"></script>
+  <script src="/blog/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="/blog/lib/popper/popper.min.js"></script>
+  <script src="/blog/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/blog/lib/easing/easing.min.js"></script>
+  <script src="/blog/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/blog/lib/scrollreveal/scrollreveal.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="/blog/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="/blog/js/main.js"></script>
+
+
+<script>
+  
+  function getlike(){
+   
+    document.getElementById("checkbox").checked = true;
+    document.likeform.submit();
+    
+  }
+  
+</script>
+</body>
+</html>

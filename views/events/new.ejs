@@ -1,0 +1,77 @@
+
+<% include ../partials/header %>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+<div class="container">
+    <div class="row">
+           <h1 style="text-align:center;">Create a New Event</h1>
+           <div style="width:80%; margin: 20px auto;">
+                <form action="/events" method="POST">
+                    <div class="form-group col-xs-6">
+                        <input class="form-control" type ="text" placeholder="Title" name="title">
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <input class="form-control" type ="text" placeholder="image url" name="image">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="8" id="description" placeholder="description" name="description"></textarea>
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <input class="form-control" type ="text" placeholder="Whos Preaching" name="preaching">
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <input class="form-control" type ="text" placeholder="subDescription" name="subDiscription">
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <input class="form-control" type ="text" placeholder="address" name="address">
+                    </div>
+                    
+                                        
+    <div class="form-group col-xs-3">
+        <div class="">
+          <select class="form-control" name="category">
+            <option value="Topic 1">Choose Category</option>
+            <option value="service">service</option>
+            <option value="womanService">woman Service</option>
+            <option name="prayers" value="prayers">Prayers</option>
+            <option value="celebrations">celebrations</option>
+          </select>
+        </div>
+        </div>
+                    
+                    
+                    <div class="form-group col-xs-4">
+                        <input class="form-control" type ="text" placeholder="month" name="month">
+                    </div>
+                    
+                    <div class="form-group col-xs-2">
+                        <input class="form-control" type ="text" placeholder="12" name="monthDay">
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <input class="form-control" type ="text" placeholder="day" name="day">
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <input class="form-control" type ="text" placeholder="time" name="time">
+                    </div>
+                    
+                    
+      <label for="example-date-input" class="col-xs-2 col-form-label">Date of event:</label>
+  <div class="form-group col-xs-4">
+    <input class="form-control" type="date" value="2019-08-19" id="example-date-input" name="dateOfEvent">
+  </div>                
+                    
+                    
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    </div>
+
+
+                </form>
+                                    <a href="/">Back</a> 
+           </div>
+           
+    </div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,51 @@
+<% include ./partials/headerSematic %>
+
+  
+  <style>
+
+    .column {
+      max-width: 450px;
+    }
+    
+    body{
+      overflow:hidden;
+    }
+    
+    @media only screen and (max-width: 700px) {
+      body{
+            overflow: scroll;
+            }
+      
+
+    
+    }
+    
+    </style>
+
+
+<div class="ui middle aligned center aligned grid" style="margin: 5% 0;">
+    <div class="column">
+            <h2 class="ui image header">
+      <div class="content">
+        Log-in to your account
+      </div>
+    </h2>
+<form class="ui blue left aligned form segment" action="/login" method="POST">
+  <div class="field">
+    <label>Username</label>
+    <input type="text" name="username" placeholder="username" required>
+  </div>
+  <div class="field" style="margin-top:5%;">
+    <label>Password</label>
+    <input type="password" name="password" placeholder="password" required>
+  </div>
+  <button class="ui large primary labeled icon button" type="submit"> <i class="unlock alternate icon"></i>Login</button>
+</form>
+    <div class="ui inverted secondary blue segment">
+       Don't have an account?<br>Click on <a href="/register" style="text-decoration:none; color:teal; font-size:18px;">Register</a> to get started!
+    </div>
+</div>
+</div>
+
+
+  <% include ./partials/footerSematic %>

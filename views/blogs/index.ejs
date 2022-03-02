@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Refugio Seguro | Blogs</title>
+<meta name="description" content="Refugio Seguro es un CASA DE RESTAURACIÓN, SANIDAD, Y LIBERACIÓN">
+<meta name="keywords" content="Refugio Seguro, Pharr, Church, Spanish Church ">
+<meta name="news_keywords" content="Church, Pharr, Refugio Seguro" />
+<meta name="author" content="Refugio Seguro">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="UxCFbJOb4uqdq5KQECIFnNsbLv5tNL2oQS6d2eQ1rMw">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="/blog/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="/blog/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/blog/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="/blog/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="/blog/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="images/favicon/icon.png" sizes="32x32">
+  <!-- Main Stylesheet File -->
+  <link href="/blog/css/style.css" rel="stylesheet">
+
+  
+<style>
+    
+    .intro-single .title-single-box {
+    border-left: 3px solid #007bff ;
+}
+
+
+    
+</style>
+
+
+<%   if(currentUser && currentUser.isAdmin){ %>
+   
+   <style>
+     
+
+
+   </style>
+   
+   <% } %>
+    
+</head>
+
+<body>
+
+
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="/" class="navbar-brand text-brand"><span class="logo-icon"><img src="/media/Logo1.png" style="width:200px"></span>
+                </a>
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">Conócenos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/blogs">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contactanos</a>
+          </li>
+          	<%   if(currentUser){ %>
+          	      <li><a class="nav-item" href="/logout"><span style="color:#fff; font-weight:700; background:red; padding:8px; border-radius:5px;">Logout</span></a></li>
+                	
+                	<% }else{ %>
+                        <li class="nav-item"><a class="nav-link" href="/login">Login</a> </li>
+         
+                	<% }%>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Single star /-->
+  <section class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-10">
+          <div class="title-single-box">
+            <h1 class="title-single">Our Blogs</h1>
+            <span class="color-text-a">Mark 16:15 - “And He said to them, ‘Go into all the world and preach the gospel to every creature.'”</span>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-2">
+          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/">Home</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Intro Single End /-->
+
+  <!--/ News Grid Star /-->
+  <section class="news-grid grid">
+    <div class="container">
+      <div class="row">
+          
+          <% blog.forEach(function(allblogs){ %>
+          
+        <div class="col-md-6">
+          <div class="card-box-b card-shadow news-box">
+            <div class="img-box-b">
+              <img src="<%=allblogs.image%>" width="100%" alt="" class="img-b img-fluid">
+            </div>
+            <div class="card-overlay">
+              <i class="fas fa-thumbs-up" style="color:#fff; padding:10px;"></i><span style="color:#fff"><%= allblogs.Likes.length %></span>
+              <div class="card-header-b">
+                <div class="card-category-b">
+                  <a href="/blogs/<%=allblogs._id%>" class="category-b" style="border-radius: 8px;"><%= allblogs.category %></a>
+                </div>
+                <div class="card-title-b">
+                  <h2 class="title-2">
+                    <a href="/blogs/<%=allblogs._id%>"><%= allblogs.title%>
+                  </h2>
+                </div>
+                <div class="card-date">
+                  <span class="date-b"><%=moment(allblogs.createdAt).format("MMM Do YY") %></span>
+                </div>
+                 <p class="small" style="color:#fff; position:absolute; bottom:-20%;">Comments: <%= allblogs.comments.length %> </p>
+                
+              </div>
+            </div>
+          </div>
+          
+          <%if(currentUser && currentUser.isAdmin){ %>
+          
+          
+          <a href="/blogs/<%=allblogs._id%>/edit" class="btn btn-sm btn-warning" style="margin-bottom: 50px;">Edit Blog</a>
+      <form action="/blogs/<%=allblogs._id%>?_method=DELETE" method="POST" style="display:inline-block;">
+      <button type="submit" class="btn btn-sm btn-danger" style="display:inline-block; margin-bottom: 50px;" value="DELETE">Delete</button>
+      </form>
+      
+       <% }%>
+       
+       
+        </div>
+        <%  });  %>
+      </div>
+    </div>
+  </section>
+  <!--/ News Grid End /-->
+
+  <!--/ footer Star /-->
+  <footer class="site-footer">
+       	<div class="container">
+    		<div class="site-footer-top">
+            	<div class="row" style="padding:20px;">
+            	    <% var index = 0; %>
+            	    <% home.forEach(function(allhome){%>
+            	    <% if(index == 0){ %>
+                	<div class="col-md-4 widget footer_widget text_widget">
+                        <h4>About our church</h4>
+                        <hr class="sm">
+                        <p style="text-align:left;"><%=allhome.paragraph %></p>
+                    </div>
+                    <% } index++; %>
+                    <%  }); %>
+<!--
+                	<div class="col-md-4 widget footer_widget twitter_widget">
+                    	<h4>Twitter feeds</h4>
+                        <hr class="sm">
+                      	<ul class="twitter-widget"></ul>
+            		</div>
+-->
+                	<div class="col-md-4 widget footer_widget twitter_widget">
+                    	<h4>Facebook feeds</h4>
+                        <hr class="sm">
+                      	<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRefugioSeguroIglesia%2Fposts%2F1136396179872313&width=300" width="100%" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            		</div>
+                	<div class="col-md-4 widget footer_widget newsletter_widget">
+                        <h4>News subscription</h4>
+                        <hr class="sm">
+                        <p style="text-align:left; padding-left:20px;">Subscribe to our newsletter in order to receive the latest new &amp; articles. We promise we won't spam your inbox!</p>
+                        <div class="input-group">
+                            <span class="input-group-addon"></span>
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">Go!</button>
+                            </span>
+                        </div>
+            		</div>
+               	</div>
+        		<!-- Quick Info -->
+        		<div class="quick-info" style="margin-top:40px; background:#555555; padding:20px; border-radius:5px;">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <h4><i class="fa fa-clock-o"></i> Service Times</h4>
+                            <p style="color:#fff;">Sundays - 11:00 AM (EN)<br>Domingo - 2:00 pm (ESP)<br>Wednesday - 7:00 pm</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <h4><i class="fa fa-map-marker"></i> Our Location</h4>
+                            <p style="color:#fff;">3211 N Victoria RD<br>Donna, Texas</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <h4><i class="fa fa-envelope"></i> Contact Info</h4>
+                            <p style="color:#fff;">1-956-961-4367<br>refugioseguroministries@gmail.com</p>
+                        </div>
+                    </div>
+            	</div>
+        		<div class="site-footer-bottom" style="margin-top:20px;">
+            		<div class="row">
+                		<div class="col-md-12 copyrights-coll">
+        					&copy; 2019 <a href="http://lgnetworkdesign.com" target="_blank">LGNetworkDesign.</a> All Rights Reserved
+            			</div>
+                   	</div>
+               	</div>
+           	</div>
+        </div>
+    </footer>
+  <!--/ Footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="/blog/lib/jquery/jquery.min.js"></script>
+  <script src="/blog/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="/blog/lib/popper/popper.min.js"></script>
+  <script src="/blog/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/blog/lib/easing/easing.min.js"></script>
+  <script src="/blog/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/blog/lib/scrollreveal/scrollreveal.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="/blog/js/main.js"></script>
+
+  <script>
+   
+$( ".card-box-b" ).mouseover(function() {
+    $('.small').css({"color":"#2eca6a"});
+   
+  });
+  
+  $( ".card-box-b" ).mouseout(function() {
+    $('.small').css({"color":"#fff"});
+   
+  });
+  </script>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</body>
+</html>

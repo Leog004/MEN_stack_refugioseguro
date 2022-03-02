@@ -1,0 +1,140 @@
+ <div class="modal fade" id="EOffering" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="EOffering" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Online Offering <span class="accent-color"></span></h4>
+      </div>
+      <div class="modal-body">
+        <form id="myForm" action="/charge" method="POST">
+                            <label>Amount:</label>
+            <div class="row">
+                <div class="col-md-6">
+                <input class="form-control" id="hello" type ="number"  min="0.01" step="1.00" max="2500" value="5.00" name="Amount">
+                </div>
+                <div class="col-md-6">
+                    <script src="https://checkout.stripe.com/checkout.js"></script>
+                        <input type="hidden" id="stripeToken" name="stripeToken" />
+                        <input type="hidden" id="stripeEmail" name="stripeEmail" />
+                    <button type="submit" class="btn btn-primary form-control" id="customButton">Proceed with payment</button>   
+                </div>
+                    
+            </div>
+            
+<script type="text/javascript" src="/js/stripe.js"></script>
+                        
+            
+            
+            
+            
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p class="small short">If you would prefer to call in for inquiries, please call 1800.785.876</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+  <footer class="site-footer">
+       	<div class="container">
+    		<div class="site-footer-top">
+            	<div class="row">
+            	    <% var index = 0; %>
+            	    <% home.forEach(function(allhome){%>
+            	    <% if(index == 0){ %>
+                	<div class="col-md-4 widget footer_widget text_widget">
+                        <h4>Conócenos</h4>
+                        <hr class="sm">
+                        <p><%=allhome.paragraph %></p>
+                    </div>
+                    <% } index++; %>
+                    <%  }); %>
+<!--
+                	<div class="col-md-4 widget footer_widget twitter_widget">
+                    	<h4>Twitter feeds</h4>
+                        <hr class="sm">
+                      	<ul class="twitter-widget"></ul>
+            		</div>
+-->
+                	<div class="col-md-4 widget footer_widget twitter_widget">
+                    	<h4>Facebook</h4>
+                        <hr class="sm">
+                      	<!--<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRefugioSeguroIglesia%2Fposts%2F1136396179872313&width=300" width="100%" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>-->
+            		<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRefugioSeguroIglesia%2Fposts%2F1186382318207032%3A0&width=400" width="100%" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            		</div>
+                	<div class="col-md-4 widget footer_widget newsletter_widget">
+                        <h4>Suscríbete</h4>
+                        <hr class="sm">
+                        <p>Suscríbete a nuestra hoja informativa para obtener lo más reciente. Prometemos no llenar
+tu correo!</p>
+                        <form action="/subscriber" method="POST" class="input-group" name="myform">
+                            <span class="input-group-addon">@</span>
+                            <input type="email" id="email" name="email" class="form-control">
+                            <span class="input-group-btn">
+                            <a href="javascript:checkEmail();" class="btn btn-primary">Go!</a>
+                            </span>
+                        </form>
+            		</div>
+               	</div>
+        		<!-- Quick Info -->
+        		<div class="quick-info">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h4><i class="fa fa-clock-o"></i> Tiempos De Servicio</h4>
+                            <p>Domingo - 2:00 pm<br>Miércoles - 7:00 pm</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h4><i class="fa fa-map-marker"></i> Nuestra locación</h4>
+                            <p>3211 N Victoria RD <br>Donna, Texas</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h4><i class="fa fa-envelope"></i>Contáctanos</h4>
+                            <p>1-956-961-4367<br>refugioseguroministries@gmail.com</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h4><i class="fa fa-clock-o"></i> Conéctate</h4>
+                            <ul class="social-icons-colored inversed">
+                                <li class="facebook"><a href="https://www.facebook.com/RefugioSeguroIglesia"><i class="fa fa-facebook"></i></a></li>
+                                <li class="facebook" style=""><a style="background: purple !important;" href="https://www.facebook.com/Mujeres-con-Visi%C3%B3n-Refugio-Seguro-Iglesia-Familiar-582396558564425/"><i style="background: purple !important;" class="fa fa-facebook"></i></a></li>
+                                <li class="facebook"><a style="background: green !important;" href="https://www.facebook.com/restartym/"><i style="background: green !important;" class="fa fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+            	</div>
+        		<div class="site-footer-bottom">
+            		<div class="row">
+                		<div class="col-md-6 col-sm-6 copyrights-coll">
+        					&copy; 2019 <a href="http://lgnetworkdesign.com" target="_blank">LGNetworkDesign.</a> All Rights Reserved
+            			</div>
+                		<div class="col-md-6 col-sm-6 copyrights-colr">
+        					<nav class="footer-nav" role="navigation">
+                        		<ul>
+                            		<li><a href="/">Home</a></li>
+                            		<!--<li><a href="donate.html">Donate now</a></li>-->
+                            		<li><a href="/about">About Us</a></li>
+                            		<li><a href="/Contact">Contact</a></li>
+                            	</ul>
+                        	</nav>
+            			</div>
+                   	</div>
+               	</div>
+           	</div>
+        </div>
+    </footer>
+    
+    <script>
+        function checkEmail(){
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            var email = document.getElementById("email").value;
+            
+            if(!re.test(email)){
+                
+               document.getElementById("email").style.border = "2px solid red";
+               document.getElementById("email").placeholder = "Cannot leave this blank or must be a valid email";
+            }else{
+                
+                document.myform.submit();
+            }
+        }
+    </script>

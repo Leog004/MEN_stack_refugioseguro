@@ -1,0 +1,32 @@
+
+            <!-- Main Navigation -->
+            <nav class="main-navigation" role="navigation">
+                <ul class="sf-menu">
+                    <!--<li><a href="/">Home</a>-->
+                    </li>
+                    <li><a href="/about">Conócenos</a>
+                    </li>
+                    <li><a href="javascript:void(0)">Ministerios</a>
+                    	<ul class="dropdown">
+                               <li><a href="/ministry/woman">Mujeres Con Visión</a></li>
+                                    <li><a href="/ministry/praise">Alabanza y Adoración</a></li>
+                                    <li><a href="/ministry/youth">ReStart</a></li>
+                                    <li><a href="/ministry/children">RSkidz</a></li>
+                       	</ul>
+                   	</li>
+                    <li><a href="/events">Eventos</a>
+                    </li>
+                    <li><a href="/blogs">Blog</a></li>
+                    
+                    <li><a href="/contact">CONTACTANOS</a></li>
+                    <li><a href="/donate">Donaciones</a></li>
+                     <!--<li title="Offering"><a href="#" data-toggle="modal" data-target="#EOffering" class="event-contact-link"></i>Donaciones</a></li>-->
+                	<%   if(currentUser && currentUser.isAdmin){ %>
+                	
+                	<li><a href="/logout"><span style="color:#fff; font-weight:700; background:red; padding:8px; border-radius:12px;">logout</span></a></li>
+                	
+                	<% }else{ %>
+                	    <a class="btn btn-sm btn-warning" href="/login">Login</a>
+                  <% } %>
+                </ul>
+            </nav>

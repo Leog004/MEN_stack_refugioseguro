@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>RefugioSeguro Not Found</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<!-- CSS
+  ================================================== -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/vendor/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="/vendor/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
+<link href='/vendor/fullcalendar/fullcalendar.css' rel='stylesheet'>
+<link href='/vendor/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print'>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+<link href="/css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
+<!-- Color Style -->
+<link href="/colors/color5.css" rel="stylesheet" type="text/css">
+<!-- SCRIPTS
+  ================================================== -->
+<script src="/js/modernizr.js"></script><!-- Modernizr -->
+</head>
+<body>
+<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<div class="body"> 
+	<!-- Start Site Header -->
+	<header class="site-header">
+    	<div class="container for-navi">
+        	<div class="site-logo">
+            <h1>
+                <a href="/">
+                    <span class="logo-icon"><img src="/images/Untitled%20design.png"></span>
+                </a>
+            </h1>
+            </div>
+            <!-- Main Navigation -->
+           <% include ./partials/rsheader %>
+            <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+    	</div>
+	</header>
+	<!-- End Site Header -->
+    <!-- Start Page Header -->
+    <div class="page-header parallax clearfix">
+        <div class="title-subtitle-holder">
+        	<div class="title-subtitle-holder-inner">
+    			<h2>404 Error!</h2>
+        	</div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+    <!-- Breadcrumbs -->
+    <div class="lgray-bg breadcrumb-cont">
+    	<div class="container">
+          	<ol class="breadcrumb">
+            	<li><a href="/">Home</a></li>
+            	<li class="active">404</li>
+          	</ol>
+        </div>
+    </div>
+    <!-- Start Body Content -->
+  	<div class="main" role="main">
+    	<div id="content" class="content full">
+    		<div class="container">
+            	<div class="text-align-center error-404">
+            		<h1 class="huge">404</h1>
+              		<hr class="sm">
+              		<p><strong>Sorry - Page Not Found!</strong></p>
+					<p>The page you are looking for was moved, removed, renamed<br>or might never existed. You stumbled upon a broken link :(</p>
+             	</div>
+             	<div class="spacer-100"></div>
+             	            	<div class="col-md-5 col-sm-5">
+                	<% var i=0; var currentTime = new Date(); currentTime.setHours(0,0,0,0); %>
+                	<%event.forEach(function(allevents){ %>
+                	<%if (i < 1 && allevents.dateOfEvent >= currentTime){ %>
+                	<span class="label label-primary">Upcoming Event</span> <a href="/events/<%=allevents._id%>/edit" class="label label-danger">Edit Event</a>
+                	<h3><a data-html="true" href="/events/<%=allevents._id%>" class="event-title"><%=allevents.title%></a></h3>
+                   	<span class="meta-data">On <span class="event-date"><%=allevents.month%> <%=allevents.monthDay%>, 2019</span> at <span class="event-time"><%=allevents.time%></span> at</span><span class="meta-data event-location"> <span class="event-location-address"><%=allevents.address%></span></span>
+                </div>
+                <div class="col-md-5 col-sm-7">
+                    <div id="counter" class="counter clearfix" data-date="<%=allevents.month%> <%=allevents.monthDay%>, 2019 <%=allevents.time%>">
+                        <div class="timer-col"> <span id="days"></span> <span class="timer-type">Days</span> </div>
+                        <div class="timer-col"> <span id="hours"></span> <span class="timer-type">Hours</span> </div>
+                        <div class="timer-col"> <span id="minutes"></span> <span class="timer-type">Minutes</span> </div>
+                        <div class="timer-col"> <span id="seconds"></span> <span class="timer-type">Seconds</span> </div>
+                    </div>
+                </div>
+                <div class="col-md-2 text-align-right">
+                    <ul class="action-buttons">
+                        <li title="Share event"><a href="#" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>
+                        <li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>
+                        <li title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>
+                    </ul>
+                    <a href="/events/<%=allevents._id%>" class="btn btn-primary btn-sm ">View Event</a>
+                </div>
+                                <% i++  } %>
+                <% }); %>
+            </div>
+            </div>
+        </div>
+   	</div>
+    <!-- End Body Content -->
+    
+    <!-- Start site footer -->
+
+    <% include ./partials/rsfooter %>
+
+    <!-- End site footer -->
+  	<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>  
+</div>
+<script src="/js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
+<script src="/vendor/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
+<script src="/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="/js/bootstrap.js"></script> <!-- UI -->
+<script src="/js/init.js"></script> <!-- All Scripts -->
+<script src="/vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+<script src="/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+<script src="/vendor/mediaelement/mediaelement-and-player.min.js"></script> <!-- MediaElements --> 
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</body>
+</html>

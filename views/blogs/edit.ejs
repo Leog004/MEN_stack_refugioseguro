@@ -1,0 +1,76 @@
+
+<% include ../partials/header %>
+<style>
+    label{
+    
+        margin: 10px 0;
+    }
+</style>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+<div class="container">
+    <div class="row">
+           <h1 style="text-align:center;">Edit Blog</h1>
+           <div style="width:80%; margin: 20px auto;">
+                <form action="/blogs/<%=blog._id%>?_method=PUT" method="POST">
+                    <div class="form-group col-xs-6">
+                        <label>Title:</label>
+                        <input class="form-control" type ="text" placeholder="Title" value="<%=blog.title%>" name="blog[title]">
+                    </div>                    
+                    <div class="form-group col-xs-6">
+                        <label>Sub-Title:</label>
+                        <input class="form-control" type ="text" placeholder="subTitle" value="<%=blog.subTitle%>" name="blog[subTitle]">
+                    </div>
+                    <div class="form-group col-xs-8">
+                        <label>Image URL:</label>
+                        <input class="form-control" type ="text" placeholder="image url" value="<%=blog.image%>" name="blog[image]">
+                    </div>
+                    <div class="form-group col-xs-4">
+                        <label>Category:</label>
+                            <div class="">
+                                  <select class="form-control" value="<%=blog.category%>" name="blog[category]">
+                                    <option name="Topic 1" value="Topic 1">Choose Category</option>
+                                    <option name="testimonial"  value="testimonial">testimonial</option>
+                                    <option name="event" value="event">event</option>
+                                    <option name="prayers" value="prayers">Prayers</option>
+                                    <option name="Other">Other</option>
+                                  </select>
+                            </div>
+                  </div>
+                    <div class="form-group">
+                        <label>Bold Paragraph:</label>
+                        <textarea class="form-control" rows="8" id="boldParagraph" placeholder="boldParagraph" name="blog[boldParagraph]"><%=blog.boldParagraph%></textarea>
+                    </div>                    
+                    <div class="form-group">
+                        <label>Paragraph 1:</label>
+                        <textarea class="form-control" rows="8" id="paragraph1" placeholder="paragraph1" name="blog[paragraph1]"> <%=blog.paragraph1%></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Paragraph 2:</label>
+                        <textarea class="form-control" rows="8" id="paragraph2" placeholder="paragraph2" name="blog[paragraph2]"> <%=blog.paragraph2%></textarea>
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label>Qoute:</label>
+                        <input class="form-control" type ="text" placeholder="qoute" value="<%=blog.qoute%>" name="blog[qoute]">
+                    </div>                    
+                    <div class="form-group col-xs-6">
+                        <label>Qoute Author:</label>
+                        <input class="form-control" type ="text" placeholder="from who" value="<%=blog.qouteAuthor%>" name="blog[qouteAuthor]">
+                    </div>
+                    <div class="form-group">
+                        <label>Paragraph 3:</label>
+                        <textarea class="form-control" rows="8" id="paragraph2" placeholder="paragraph3" name="blog[paragraph3]"><%=blog.paragraph3%></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    </div>
+
+
+                </form>
+                                    <a href="/">Back</a> 
+           </div>
+           
+    </div>
+</div>
+
+<% include ../partials/footer %>

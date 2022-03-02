@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>RefugioSeguro Woman Ministry</title>
+<meta name="description" content="Refugio Seguro es un CASA DE RESTAURACIÓN, SANIDAD, Y LIBERACIÓN">
+<meta name="keywords" content="Refugio Seguro, Pharr, Church, Spanish Church ">
+<meta name="news_keywords" content="Church, Pharr, Refugio Seguro" />
+<meta name="author" content="Refugio Seguro">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="UxCFbJOb4uqdq5KQECIFnNsbLv5tNL2oQS6d2eQ1rMw">
+<!-- CSS
+  ================================================== -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/vendor/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="/vendor/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+<link href="/css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
+<!-- Color Style -->
+<link href="/colors/color9.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="/images/favicon/icon.png" sizes="32x32">
+
+<!-- SCRIPTS
+  ================================================== -->
+<script src="js/modernizr.js"></script><!-- Modernizr -->
+
+
+<style>
+    .flex-caption{
+        top:45%;
+        left:10%;
+    }
+    
+</style>
+
+
+</head>
+<body class="home">
+<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<div class="body"> 
+	<!-- Start Site Header -->
+	<header class="site-header">
+    	<div class="container for-navi">
+        	<div class="site-logo">
+            <h1>
+                <a href="/">
+                    <span class="logo-icon"><img src="/media/Logo2.png"></span>
+                </a>
+            </h1>
+            </div>
+            <!-- Main Navigation -->
+            <% include ../partials/rsheader %> 
+            <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+    	</div>
+	</header>
+	<!-- End Site Header -->
+    <!-- Start Hero Slider -->
+    <div class="hero-slider heroflex flexslider clearfix" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-speed="7000" data-pause="yes">
+      	<ul class="slides">
+        	<li class="parallax" style="background-image:linear-gradient(rgba(100,10,180,.8),rgba(0,0,0,.8)),url(/images/Woman2.jpg);">
+            	<div class="flex-caption" data-appear-animation="fadeInRight" data-appear-animation-delay="500">
+                	<strong>Adoración </strong>
+                	<p>	Nuestras reuniones de oración comienzan con un tiempo de adoración. Un tiempo en el cual no pedimos nada, sino que solamente damos gracias. </p>
+               	</div>
+            </li>
+        	<li class="parallax" style="background-image:linear-gradient(rgba(100,10,180,.8),rgba(0,0,0,.8)),url(/images/woman3.jpg);">
+            	<div class="flex-caption" data-appear-animation="fadeInRight" data-appear-animation-delay="500">
+                	<strong>Intercesión </strong>
+                	<p>	Al orar nuestro clamor se convierte en un grito de guerra. Nos colocamos en nuestra posición como hijas de Dios, y tomamos el poder y la autoridad que Dios nos da para reclamar lo que nos pertenece. </p>
+               	</div>
+            </li>
+        	<li class="parallax" style="background-image:linear-gradient(rgba(100,10,180,.8),rgba(0,0,0,.8)),url(/images/woman3.jpg);">
+            	<div class="flex-caption" data-appear-animation="fadeInRight" data-appear-animation-delay="500">
+                	<strong>Compañerismo </strong>
+                	<p>		Al final tomamos un tiempo de compañerismo. Un tiempo en el cual conversamos y compartimos alimentos con el propósito de aprender las unas a las otras, y desarrollar amistades que nos ayuden a fortalecer y crecer en nuestra relación con Dios.   </p>
+               	</div>
+            </li>
+      	</ul>
+        <canvas id="canvas-animation"></canvas>
+    </div>
+    <!-- End Hero Slider -->
+    <!-- Lead Content -->
+        <div class="lgray-bg breadcrumb-cont">
+    	<div class="container">
+          	<ol class="breadcrumb">
+            	<li><a href="/">Home</a></li>
+            	<li class="active">Woman Ministry</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Start Body Content -->
+  	<div class="main" role="main">
+    	<div id="content" class="content full">
+        	<div class="container">
+        	    <div class="col-md-9">
+        	   <span class="label label-primary">We Love To Praise Him <i class="fas fa-cross" style="margin-left:5px;"></i></span>
+
+        	   
+        	   <% ministry.forEach(function(allministry){ %>
+        	   <% for(y in allministry){ %>
+        	   <% if (allministry[y] == "woman"){ %>
+        	   <% if(currentUser && currentUser.isAdmin){ %>
+        	   <a href="/ministry/<%=allministry._id%>/edit" class="label label-danger">Edit Woman Ministry <i class="fas fa-cross" style="margin-left:5px;"></i></a>
+        	   <% } %>
+                <h2><%= allministry.title %></h2>
+              	<hr class="sm">
+                <h4><%= allministry.subtitle %></h4>
+                    <p><%=allministry.description %></p>
+                       <div class="spacer-50"></div>
+                <div class="row">
+                	<div class="col-md-6 col-sm-6">
+                    	<div class="icon-box icon-box-style1">
+                        	<div class="icon-box-head">
+                            	<span class="ico"><i class="fas fa-book-open"></i></span>
+                            	<h4><%=allministry.Secondtitle%></h4>
+                           	</div>
+            				<p><%=allministry.paragraph%></p>
+                       	</div>
+                   	</div>
+                	<div class="col-md-6 col-sm-6">
+                    	<div class="icon-box icon-box-style1">
+                        	<div class="icon-box-head">
+                            	<span class="ico"><i class="fas fa-female"></i></span>
+                            	<h4><%=allministry.Secondsubtitle%></h4>
+                           	</div>
+            				<p><%=allministry.paragraphSecond%></p>
+                       	</div>
+                   	</div>
+              	</div>         	
+                </div>
+                
+                <% } } });    %>
+                
+                <div class="col-md-3">
+                        	<h3>Lider</h3>
+                            <hr class="sm">
+                        <div class="grid-item staff-item format-standard">
+                        	<div class="grid-item-inner">
+                          		<a href="staff.html" class="media-box">
+                                	 <img src="/images/DSC03625.JPG" alt="">
+                               	</a> 
+                          		<div class="grid-content">
+                                	<div class="staff-item-name">
+                            			<h5>Cristina Garza</h5>
+                                        <span class="meta-data">Mujeres con Visión</span>
+                                    </div>
+                            		<p class="text-left">Te invito a que vengas a ser parte de lo que Dios está haciendo por medio del
+poder de la oración!</p>
+                          		</div>
+                             </div>
+                        </div>      
+                    <div class="btn btn-primary" title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link" style="color:#fff;"><i class="icon-mail"></i> Contactame</a></div>
+
+                </div>
+              
+                
+                
+                
+                
+            </div>
+        </div>
+   	</div>
+    <!-- End Body Content -->
+    <!-- Gallery updates -->
+    <div class="gallery-updates cols5 clearfix">
+    	<ul>
+        	<li class="format-image"><a href="/images/woman/IMG_2570.JPG" data-rel="prettyPhoto" class="media-box"><img src="/images/woman/IMG_2570.JPG" alt=""></a></li>
+        	<li class="format-standard">
+            	<div class="flexslider galleryflex" data-autoplay="yes" data-pagination="yes" data-arrows="no" data-style="slide" data-pause="yes">
+                    <ul class="slides">
+                      	<li class="item"><a href="/images/woman/IMG_2647.png" data-rel="prettyPhoto[postname1]"><img src="/images/woman/IMG_2647.png" alt=""></a></li>
+        	<li class="format-image"><a href="/media/woman6.jpg" data-rel="prettyPhoto" class="media-box"><img src="/media/woman6.jpg" alt=""></a></li>
+              		</ul>
+               	</div>
+          	</li>
+        	<li class="format-image"><a href="/media/woman3.jpg" data-rel="prettyPhoto" class="media-box"><img src="/media/woman3.jpg" alt=""></a></li>
+        	<li class="format-image"><a href="/media/woman4.png" data-rel="prettyPhoto" class="media-box"><img src="/media/woman4.png"  alt=""></a></li>
+        	<li class="format-image"><a href="/media/woman5.jpg" data-rel="prettyPhoto" class="media-box"><img src="/media/woman5.jpg"   alt=""></a></li>
+      	</ul>
+        <div class="gallery-updates-overlay">
+        	<div class="container">
+            	<i class="icon-multiple-image"></i>
+                <h2>Updates from our gallery</h2>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="spacer-50"></div>
+    <div class="container">
+        <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="tabs">
+                      <ul class="nav nav-tabs">
+                        <li class="active"> <a data-toggle="tab" href="#sampletab1"> Map </a> </li>
+                        <li class=""> <a data-toggle="tab" href="#sampletab2"> Time Of Services </a> </li>
+                      </ul>
+                      <div class="tab-content">
+                        <div id="sampletab1" class="tab-pane active">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.2563835253386!2d-98.02940308497026!3d26.18833688344497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86657618d9368541%3A0x9fff3d9137f063d0!2s3211%20N%20Victoria%20Rd%2C%20Donna%2C%20TX%2078537!5e0!3m2!1sen!2sus!4v1577480095999!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div id="sampletab2" class="tab-pane">
+                            <p>Every Tuesday: 10:00am - 12:00pm</p>
+                        </div>
+                      </div>
+                    </div>
+        </div>
+    </div>
+</div>
+    <div class="spacer-50"></div>
+    
+    
+    
+    <!-- Start site footer -->
+    <% include ../partials/rsfooter %>
+    <!-- End site footer -->
+  	<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>  
+</div>
+
+<!-- Event Contact Modal Window -->
+<form class="modal fade" id="Econtact" action="/ministry/woman" method="POST">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Contact Cristina Garza  <span class="accent-color"></span></h4>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" name="fname" class="form-control" placeholder="First name (Required)">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="lname" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Your email (Required)">
+                </div>
+                <div class="col-md-6">
+                    <input type="number" name="phone" class="form-control" placeholder="Your phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea rows="3" cols="5" class="form-control" placeholder="Additional notes" name="message"></textarea>
+                </div>
+            </div>
+            <input type="submit" name="donate" class="btn btn-primary btn-lg btn-block" value="Contact Now">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p class="small short">Call (956) 961-4367</p>
+      </div>
+    </div>
+  </div>
+</form>
+<!-- Event Register Tickets -->
+
+
+
+
+<script src="/js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
+<script src="/vendor/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
+<script src="/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="/js/bootstrap.js"></script> <!-- UI -->
+<script src="/js/init.js"></script> <!-- All Scripts -->
+<script src="/js/home.js"></script> 
+<script src="/vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+<script src="/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+<script src="/vendor/mediaelement/mediaelement-and-player.min.js"></script> <!-- MediaElements --> 
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</body>
+</html>
